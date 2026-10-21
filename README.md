@@ -1,251 +1,180 @@
-
-<!-- ═══════════════════════════════════════════════════════════════════════════════ -->
-<!--                    ROM FLASHER PRO — GHOST PROTOCOL README                      -->
-<!--                    MOBILE SAFE • NO EMOJIS • FULL SVG ANIMATION                 -->
-<!-- ═══════════════════════════════════════════════════════════════════════════════ -->
-
 <div align="center">
 
-<!-- GHOST WAVE HEADER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0D0D0D&height=220&section=header&text=ROM%20FLASHER%20PRO&fontSize=55&fontColor=00FFFF&animation=twinkling&fontAlignY=35&desc=Enterprise-Grade%20Android%20Flashing%20Suite&descAlignY=55&descSize=20&descColor=A020F0" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&height=8&color=0:00E5FF,48:7457FF,100:0B1020" width="100%" alt="" />
 
-<!-- TYPING ANIMATION -->
-<a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=20&duration=2500&pause=800&color=00FFFF&background=0D0D0D00&center=true&vCenter=true&width=600&height=60&lines=%3E+Initializing+Flash+Engine...;%3E+Bypassing+Security...;%3E+Root+Access+Granted.;%3E+Welcome+to+ROM+Flasher+Pro." alt="Typing SVG" />
-</a>
+<img src="https://img.shields.io/badge/XBOYREX-MAYANK_DROID-0B1020?style=for-the-badge&labelColor=0B1020&color=00D9FF" alt="XBOYREX Mayank Droid" />
 
-<br>
+# ROM FLASHER PRO
 
-<!-- GHOST STATUS BADGES -->
+### V6.0.0 · WINDOWS FLASHING UTILITY
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=17&duration=2400&pause=700&color=00D9FF&center=true&vCenter=true&width=680&lines=DEVICE+TOOLS.+CLEAR+WORKFLOWS.;VERIFY+FIRST.+FLASH+CAREFULLY.;BUILT+FOR+ANDROID+POWER+USERS." alt="ROM Flasher Pro tagline" />
+
 <p>
-  <img src="https://img.shields.io/badge/STATUS-ONLINE-00FF00?style=for-the-badge&labelColor=0D0D0D&logo=statuspage&logoColor=00FF00" />
-  <img src="https://img.shields.io/badge/VERSION-V6.0.0-00FFFF?style=for-the-badge&labelColor=0D0D0D&logo=githubactions&logoColor=00FFFF" />
-  <img src="https://img.shields.io/badge/SECURITY-HARDENED-A020F0?style=for-the-badge&labelColor=0D0D0D&logo=shield&logoColor=A020F0" />
-  <img src="https://img.shields.io/badge/LICENSE-PROPRIETARY-F8F8FF?style=for-the-badge&labelColor=0D0D0D&logo=opensourceinitiative&logoColor=F8F8FF" />
+  <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest"><img src="https://img.shields.io/github/v/release/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid?style=for-the-badge&label=LATEST%20RELEASE&color=00D9FF&labelColor=0B1020" alt="Latest release" /></a>
+  <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases"><img src="https://img.shields.io/badge/PLATFORM-WINDOWS-0B1020?style=for-the-badge&logo=windows&logoColor=00D9FF" alt="Windows" /></a>
+  <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid"><img src="https://img.shields.io/badge/RELEASE-BINARY_ONLY-0B1020?style=for-the-badge&logo=github&logoColor=8B5CF6" alt="Binary-only release" /></a>
 </p>
 
-<!-- TECH STACK BADGES -->
 <p>
-  <img src="https://img.shields.io/badge/PLATFORM-WINDOWS_10_|_11-00FFFF?style=for-the-badge&labelColor=0D0D0D&logo=windows&logoColor=00FFFF" />
-  <img src="https://img.shields.io/badge/ARCH-X86__64-A020F0?style=for-the-badge&labelColor=0D0D0D&logo=amd&logoColor=A020F0" />
-  <img src="https://img.shields.io/badge/ANDROID-14_|_15-3DDC84?style=for-the-badge&labelColor=0D0D0D&logo=android&logoColor=3DDC84" />
-  <img src="https://img.shields.io/badge/FASTBOOT-ADB-FF4500?style=for-the-badge&labelColor=0D0D0D&logo=androidstudio&logoColor=FF4500" />
+  <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest">DOWNLOAD LATEST BUILD</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/issues">REPORT AN ISSUE</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/xboyrex">DEVELOPER PROFILE</a>
 </p>
 
-<!-- SOCIAL NAVIGATION -->
-<p>
-  <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest"><img src="https://img.shields.io/badge/DOWNLOAD_EXE-0D0D0D?style=for-the-badge&labelColor=00FFCC&logo=github&logoColor=0D0D0D" /></a>
-  <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid"><img src="https://img.shields.io/badge/REPOSITORY-0D0D0D?style=for-the-badge&labelColor=A020F0&logo=github&logoColor=0D0D0D" /></a>
-  <a href="https://t.me/MayankDroid7"><img src="https://img.shields.io/badge/TELEGRAM-0D0D0D?style=for-the-badge&labelColor=39FF14&logo=telegram&logoColor=0D0D0D" /></a>
-</p>
+<img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00E5FF,48:7457FF,100:0B1020" width="100%" alt="" />
 
 </div>
 
-<br>
+## 01 / Overview
 
-<!-- GHOST DIVIDER -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0D0D0D&height=5&section=header&text=&fontSize=20&fontColor=00FFFF" width="100%"/>
-</div>
+**ROM Flasher Pro** is a Windows executable for Android device flashing workflows. The V6.0.0 release is distributed as a compiled binary; source code is not included in this repository.
 
-<br>
+The interface and workflow are designed around device preparation, firmware checks, partition staging, and explicit operator control. Actual compatibility depends on the device, firmware package, bootloader state, and installed platform tools.
 
-<!-- SNAKE GAME SECTION -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=0D0D0D&height=60&section=header&text=SNAKE%20PROTOCOL&fontSize=30&fontColor=39FF14&animation=fadeIn" width="80%"/>
-  <br>
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" />
-</div>
+> **Important:** Flashing can erase data or make a device unbootable. Confirm the exact device model and firmware, keep a verified backup, and understand the recovery process before proceeding.
 
-<br>
+## 02 / Capabilities
 
-<!-- SYSTEM LOG SECTION -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=0D0D0D&height=60&section=header&text=SYSTEM%20OVERVIEW&fontSize=30&fontColor=A020F0&animation=fadeIn" width="80%"/>
-</div>
+<table>
+  <tr>
+    <td width="50%" valign="top">
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="50%">
-        <img src="https://img.shields.io/badge/ZERO_DEPENDENCIES-00FFFF?style=for-the-badge&labelColor=0D0D0D&logo=checkmarx&logoColor=00FFFF" />
-        <br>
-        <sub>No Python, no Android SDK, no driver hunting. Just run the EXE.</sub>
-      </td>
-      <td align="center" width="50%">
-        <img src="https://img.shields.io/badge/PROPRIETARY_BINARY-A020F0?style=for-the-badge&labelColor=0D0D0D&logo=shield&logoColor=A020F0" />
-        <br>
-        <sub>Source code is not distributed. Binary-only release.</sub>
-      </td>
-    </tr>
-  </table>
-</div>
+### <img src="https://img.shields.io/badge/01-00D9FF?style=flat-square&labelColor=0B1020" alt="01" /> Partition workflow
 
-<br>
+Direct-write workflow is described for `boot`, `init_boot`, `vendor_boot`, and `dtbo`. Only flash partitions supported by your exact device and firmware.
 
-<!-- TECHNICAL CAPABILITIES SECTION -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=0D0D0D&height=60&section=header&text=TECHNICAL%20CAPABILITIES&fontSize=30&fontColor=00FFFF&animation=fadeIn" width="80%"/>
-</div>
-
-<table align="center" width="100%">
-<tr>
-<td align="center" width="50%">
-  <img src="https://img.shields.io/badge/VIRTUAL_A/B_ENGINE-0D0D0D?style=for-the-badge&labelColor=00FFFF&logo=android&logoColor=0D0D0D" width="220"/>
-  <br>
-  <sub><b>Direct Write:</b> <code>boot</code> • <code>init_boot</code> • <code>vendor_boot</code> • <code>dtbo</code></sub>
 </td>
-<td align="center" width="50%">
-  <img src="https://img.shields.io/badge/HYPEROS_ENGINE-0D0D0D?style=for-the-badge&labelColor=A020F0&logo=xiaomi&logoColor=0D0D0D" width="220"/>
-  <br>
-  <sub><b>ARB Guard:</b> Native extraction + execution of <code>flash_all.bat</code></sub>
+    <td width="50%" valign="top">
+
+### <img src="https://img.shields.io/badge/02-8B5CF6?style=flat-square&labelColor=0B1020" alt="02" /> Firmware handling
+
+Release notes describe native archive extraction and handling of `flash_all.bat`. Inspect package contents and scripts before execution.
+
 </td>
-</tr>
-<tr>
-<td align="center" width="50%">
-  <img src="https://img.shields.io/badge/HARDWARE_GUARDIAN-0D0D0D?style=for-the-badge&labelColor=39FF14&logo=linux&logoColor=0D0D0D" width="220"/>
-  <br>
-  <sub><b>Interlock:</b> Real-time process termination lock on window closure</sub>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+
+### <img src="https://img.shields.io/badge/03-00D9FF?style=flat-square&labelColor=0B1020" alt="03" /> Verification
+
+Use SHA-256 to check that the downloaded executable matches the published checksum. A matching hash confirms file integrity against that checksum, not that the program is risk-free.
+
 </td>
-<td align="center" width="50%">
-  <img src="https://img.shields.io/badge/PAYLOAD_EXTRACTOR-0D0D0D?style=for-the-badge&labelColor=F8F8FF&logo=go&logoColor=0D0D0D" width="220"/>
-  <br>
-  <sub><b>Sub-Minute:</b> Parallel worker pool • SHA-256 verified</sub>
+    <td width="50%" valign="top">
+
+### <img src="https://img.shields.io/badge/04-8B5CF6?style=flat-square&labelColor=0B1020" alt="04" /> Operator control
+
+The project describes a process-termination lock on window closure. Do not close the application or disconnect the device during an active flash operation unless its instructions explicitly say it is safe.
+
 </td>
-</tr>
+  </tr>
 </table>
 
-<br>
+## 03 / Interface preview
 
-<!-- GRAPHICAL INTERFACE SECTION -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=0D0D0D&height=60&section=header&text=GRAPHICAL%20INTERFACE&fontSize=30&fontColor=39FF14&animation=fadeIn" width="80%"/>
-</div>
+Screenshots below are loaded from the repository root. Select any image to open the original file.
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center" width="50%">
-        <b>Studio Dashboard</b><br>
-        <img src="https://raw.githubusercontent.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/main/1.png" width="100%" style="border-radius: 6px;" />
-      </td>
-      <td align="center" width="50%">
-        <b>Partition Staging</b><br>
-        <img src="https://raw.githubusercontent.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/main/2.png" width="100%" style="border-radius: 6px;" />
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="50%">
-        <b>Stock HyperOS Engine</b><br>
-        <img src="https://raw.githubusercontent.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/main/3.png" width="100%" style="border-radius: 6px;" />
-      </td>
-      <td align="center" width="50%">
-        <b>Hardware Console Stream</b><br>
-        <img src="https://raw.githubusercontent.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/main/4.png" width="100%" style="border-radius: 6px;" />
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="50%">
-        <b>Firmware Verification</b><br>
-        <img src="https://raw.githubusercontent.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/main/5.png" width="100%" style="border-radius: 6px;" />
-      </td>
-      <td align="center" width="50%">
-        <b>Kernel Injection</b><br>
-        <img src="https://raw.githubusercontent.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/main/6.png" width="100%" style="border-radius: 6px;" />
-      </td>
-    </tr>
-  </table>
+
+| Studio Dashboard | Partition Staging |
+|:---:|:---:|
+| [![Studio Dashboard](1.png)](1.png) | [![Partition Staging](2.png)](2.png) |
+| Firmware Verification | Hardware Console |
+| [![Firmware Verification](3.png)](3.png) | [![Hardware Console](4.png)](4.png) |
+| Kernel Injection | Flash Workflow |
+| [![Kernel Injection](5.png)](5.png) | [![Flash Workflow](6.png)](6.png) |
+
+[![Additional interface screenshot](7.png)](7.png)
+
 </div>
 
-<br>
+## 04 / Download
 
-<!-- DEPLOYMENT PROTOCOL SECTION -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=0D0D0D&height=60&section=header&text=DEPLOYMENT%20PROTOCOL&fontSize=30&fontColor=A020F0&animation=fadeIn" width="80%"/>
+
+### ROM Flasher Pro V6.0.0
+
+<a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest">
+  <img src="https://img.shields.io/badge/DOWNLOAD_FOR_WINDOWS-V6.0.0-00D9FF?style=for-the-badge&logo=windows&logoColor=0B1020&labelColor=0B1020" alt="Download ROM Flasher Pro for Windows" />
+</a>
+
+**[Open latest release and verify its assets](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest)**
+
 </div>
 
-```bash
-# 1. Fetch Executable
-wget https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest/download/ROM_Flasher_Pro_V6.exe
+### Download from PowerShell
 
-# 2. Ensure ADB/Fastboot & OEM Drivers are installed
-# 3. Reboot target device to Fastboot Mode
-adb reboot bootloader
-
-# 4. Execute with Administrative Privileges
-./ROM_Flasher_Pro_V6.exe
-```
-
-<br>
-
-<!-- INTEGRITY CHECK SECTION -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=0D0D0D&height=60&section=header&text=INTEGRITY%20CHECK&fontSize=30&fontColor=00FFFF&animation=fadeIn" width="80%"/>
-</div>
+Open PowerShell and run:
 
 ```powershell
-# Open PowerShell and run:
+$uri = "https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest/download/ROM_Flasher_Pro_V6.exe"
+Invoke-WebRequest -Uri $uri -OutFile ".\ROM_Flasher_Pro_V6.exe"
+```
+
+If the asset name changes in a future release, download the executable directly from the release page instead.
+
+## 05 / Verify the download
+
+In PowerShell, run:
+
+```powershell
 Get-FileHash .\ROM_Flasher_Pro_V6.exe -Algorithm SHA256
-
-# Expected Output:
-# 2834E7E3D84819EFE4238D3018CFECCA710B3801A6295177972716A27FA7979E
-```
-> **PASS:** Match -> Safe to run.
-> **FAIL:** Mismatch -> Delete & re-download.
-
-<br>
-
-<!-- WARNING BANNER -->
-<div align="center">
-  <img src="https://img.shields.io/badge/WARNING_FLASH_AT_YOUR_OWN_RISK-FF0000?style=for-the-badge&labelColor=0D0D0D&logo=alert&logoColor=FF0000" />
-  <br>
-  <sub>Always backup before unlocking bootloader / flashing partitions. Use official binaries only.</sub>
-</div>
-
-<br>
-
-<!-- GITHUB STATS SECTION -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=0D0D0D&height=60&section=header&text=ACTIVITY%20METRICS&fontSize=30&fontColor=A020F0&animation=fadeIn" width="80%"/>
-</div>
-
-<div align="center">
-
-<img height="165em" src="https://github-readme-stats.vercel.app/api?username=xboyrex&show_icons=true&theme=radical&bg_color=0D0D0D&title_color=00FFFF&icon_color=A020F0&text_color=39FF14&border_color=A020F0&include_all_commits=true&count_private=true"/>
-<img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=xboyrex&layout=compact&theme=radical&bg_color=0D0D0D&title_color=00FFFF&text_color=39FF14&border_color=A020F0&langs_count=6"/>
-
-<br>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=xboyrex&theme=radical&background=0D0D0D&stroke=00FFFF&ring=A020F0&fire=39FF14&currStreakLabel=00FFFF&sideLabels=39FF14&dates=00FFFF&border=A020F0"/>
-
-<br>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=xboyrex&bg_color=0D0D0D&color=00FFFF&line=A020F0&point=39FF14&area=true&hide_border=true" width="100%"/>
-
-</div>
-
-<br>
-
-<!-- GHOST FOOTER -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0D0D0D&height=150&section=footer&text=SYSTEM%20ARCHITECTURE%20V6&fontSize=20&fontColor=00FFFF&animation=twinkling" width="100%"/>
-  
-  <br>
-  
-  <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/stargazers">
-    <img src="https://img.shields.io/github/stars/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid?style=for-the-badge&logo=github&logoColor=00FFFF&labelColor=0D0D0D&color=00FFFF&label=STARS" />
-  </a>
-  <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/network/members">
-    <img src="https://img.shields.io/github/forks/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid?style=for-the-badge&logo=github&logoColor=A020F0&labelColor=0D0D0D&color=A020F0&label=FORKS" />
-  </a>
-  <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/watchers">
-    <img src="https://img.shields.io/github/watchers/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid?style=for-the-badge&logo=github&logoColor=39FF14&labelColor=0D0D0D&color=39FF14&label=WATCHERS" />
-  </a>
-</div>
 ```
 
-### Isme kya best hai?
-1. **Exact Wahi Style:** Tumhari file ka `0D0D0D` (dark black) background, neon cyan, purple aur green colors ka perfect combination.
-2. **No Custom CSS Error:** Github jis cheez ko block karta hai (jaise `background-color`, inline styles) wo sab hata diya gaya hai. Sab kuch Shields.io aur Capsule Render se generate ho raha hai. 100% guarantee hai ki ye render hoga.
-3. **Mobile Safe:** Tables aur grids mobile par bhi ekdum clean dikhenge.
-4. **Terminal Vibe:** Stats graphs, snake game, aur system log sections tool ko ekdum hacker-style look de rahe hain.
+The checksum recorded in the repository's release information is:
+
+```text
+2834E7E3D84819EFE4238D3018CFECCA710B3801A6295177972716A27FA7979E
+```
+
+Compare the entire output hash with the checksum published for the **same release asset**. If they differ, do not run the file; download it again from the official release page and re-check. If the release asset or checksum has changed, trust the checksum published for the current release, not an old README value.
+
+## 06 / Requirements and workflow
+
+1. Use a supported Windows PC and install Android Platform Tools (`adb` and `fastboot`) from an official source.
+2. Install the correct USB driver for your device when required.
+3. Back up important data. Confirm the exact device model, firmware region/build, bootloader state, and partition layout.
+4. Charge the device and use a reliable USB cable and direct USB port.
+5. Follow the instructions supplied with the release. Do not flash files intended for a different device.
+6. Keep the device connected while an operation is active. Do not interrupt flashing or power off the PC during writes.
+7. Verify the final device state before disconnecting.
+
+Example: reboot a connected Android device into bootloader mode:
+
+```powershell
+adb devices
+adb reboot bootloader
+fastboot devices
+```
+
+Run these commands only when appropriate for your device. A device shown by `adb` may disappear from ADB and reappear under Fastboot; that is expected on many devices.
+
+## 07 / Safety notes
+
+- Unlocking a bootloader commonly wipes user data and may affect device security or warranty.
+- Never flash `boot`, `init_boot`, `vendor_boot`, `dtbo`, or other partitions solely because the option is visible. Confirm compatibility first.
+- Do not use firmware from another model or variant.
+- Keep a backup and a recovery plan available before modifying partitions.
+- Run downloaded executables only if you trust the source and have independently checked the release information. SHA-256 is an integrity check, not a malware scan.
+- This project is provided as-is. Use it at your own risk.
+
+## 08 / Support and release history
+
+- **Latest release:** [V6.0.0 and assets](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest)
+- **All releases:** [Release history](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases)
+- **Issues:** [Report a bug or compatibility problem](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/issues)
+- **Changelog:** [CHANGELOG.md](CHANGELOG.md)
+- **Release notes:** [RELEASE_NOTES.md](RELEASE_NOTES.md)
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=0:00E5FF,48:7457FF,100:0B1020" width="100%" alt="" />
+
+**XBOYREX / MAYANK DROID**
+
+<sub>ANDROID TOOLS · VERIFY BEFORE FLASHING · DOCUMENT EVERY RELEASE</sub>
+
+</div>
