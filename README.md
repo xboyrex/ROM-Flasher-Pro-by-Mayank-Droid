@@ -1,23 +1,58 @@
-# ROM Flasher Pro
+# ROM Flasher Pro V6
 
-Windows executable release for **ROM Flasher Pro**, branded in-app as developed by Mayank Droid.
+**Windows Android-flashing utility | Release: V6.0.0**
 
-> **Binary-only repository:** this repository contains the supplied Windows executable as a GitHub Release asset. The application's source code was not supplied, so this repository does not claim to contain or build the source.
+ROM Flasher Pro provides a graphical workflow for Android device maintenance tasks involving ADB/Fastboot and supported flashing packages. Always confirm device compatibility and understand each operation before proceeding.
 
 ## Download
 
-- **[Download ROM_Flasher_Pro_By_Mayank_Droid.exe](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest/download/ROM_Flasher_Pro_By_Mayank_Droid.exe)**
-- [All releases](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases)
-- [SHA-256 checksum](./ROM_Flasher_Pro_By_Mayank_Droid.exe.sha256)
+Get the latest Windows executable and the portable release bundle from the [GitHub Releases page](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases).
 
-## File verification
+- **Windows executable:** `ROM_Flasher_Pro_V6.exe`
+- **Portable bundle:** `ROM_Flasher_Pro_V6_Source_and_Release.zip`
+- **Integrity:** SHA-256 checksums are included with the release.
 
-- Asset: 
-  
-  ROM_Flasher_Pro_By_Mayank_Droid.exe
-- SHA-256: 2834e7e3d84819efe4238d3018cfecca710b3801a6295177972716a27fa7979e
-- Size: 21.43 MiB
+## Requirements
 
-## Safety
+- Windows 10/11 (64-bit recommended)
+- A compatible USB cable and device-specific USB drivers
+- Android Platform Tools / ADB-Fastboot support where required
+- Device-specific firmware and a verified package compatible with the exact model
 
-Only run the executable if you trust its origin. This upload process publishes the supplied file; it does not perform a malware audit or certify that flashing operations are safe for your device. Verify ROM/device compatibility and maintain a backup before flashing.
+## Safe-use checklist
+
+1. Back up important data before flashing or erasing any partition.
+2. Verify the device model, region, firmware build, and partition layout.
+3. Use only firmware and images intended for the exact device.
+4. Keep the device charged and do not disconnect USB during an active operation.
+5. Read each destructive-action confirmation carefully. Factory reset, metadata erasure, and partition flashing can cause data loss or render a device unbootable if used incorrectly.
+6. This project does not guarantee compatibility with every Android device or firmware.
+
+## Repository contents
+
+- `docs/` — usage, release, and integrity documentation
+- `scripts/` — checksum verification helper
+- `VERSION` — release version metadata
+- Release assets — compiled Windows executable, portable ZIP, and SHA-256 manifest
+
+## Source-code availability
+
+This repository currently distributes a compiled Windows executable and supporting documentation. The original application source code was not supplied with the EXE, so it is **not represented as source code here**. The portable ZIP is a release bundle, not a claim that the original application source has been reconstructed.
+
+## Verify a download
+
+Compare the SHA-256 value shown on the GitHub Release page with the checksum calculated locally. On Windows PowerShell:
+
+```powershell
+Get-FileHash .\\ROM_Flasher_Pro_V6.exe -Algorithm SHA256
+```
+
+On Termux/Linux:
+
+```bash
+sha256sum ROM_Flasher_Pro_V6.exe
+```
+
+## Release
+
+See [Releases](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases) for the current executable and portable bundle.

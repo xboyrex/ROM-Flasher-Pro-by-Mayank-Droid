@@ -1,0 +1,7 @@
+# Local build/release artifacts
+*.exe
+*.zip
+*.sha256
+SHA256SUMS.txt
+.DS_Store
+Thumbs.db
