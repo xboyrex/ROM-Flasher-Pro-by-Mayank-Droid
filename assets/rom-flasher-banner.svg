@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">ROM Flasher Pro by Mayank Droid</title><desc id="desc">Cyberpunk black banner with cyan and violet accents.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070910"/><stop offset="1" stop-color="#141026"/></linearGradient>
+ <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#54f4ff"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#4b5e80" stroke-opacity=".2"/></pattern>
+ <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="360" rx="22" fill="url(#bg)"/><rect width="1200" height="360" rx="22" fill="url(#grid)"/>
+<path d="M760 -40 1120 -40 920 400 560 400Z" fill="#a78bfa" opacity=".06"/><path d="M930 -40h16L746 400h-16Z" fill="#54f4ff" opacity=".13"/>
+<rect x="54" y="56" width="6" height="246" rx="3" fill="url(#neon)" filter="url(#glow)"/>
+<text x="88" y="92" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" letter-spacing="5" fill="#a6b4cf">MAYANK DROID / ANDROID TOOLKIT</text>
+<text x="84" y="176" font-family="Arial,Helvetica,sans-serif" font-size="59" font-weight="800" letter-spacing="-2" fill="#f5f7ff">ROM FLASHER</text>
+<text x="84" y="240" font-family="Arial,Helvetica,sans-serif" font-size="59" font-weight="800" letter-spacing="-2" fill="url(#neon)">PRO</text>
+<text x="88" y="282" font-family="Arial,Helvetica,sans-serif" font-size="15" letter-spacing="2" fill="#a4b2cc">CONTROL YOUR WORKFLOW. VERIFY EVERY PACKAGE.</text>
+<g transform="translate(935 104)" filter="url(#glow)">
+ <rect x="0" y="0" width="170" height="150" rx="22" fill="#0b1220" stroke="#344762" stroke-width="2"/>
+ <path d="M40 42h90v20H60v24h52v20H40z" fill="url(#neon)"/><path d="M102 86h28v20h-28z" fill="#54f4ff"/>
+ <path d="M20 127h130" stroke="#54f4ff" stroke-opacity=".45"/>
+</g>
+<text x="1020" y="287" text-anchor="middle" font-family="monospace" font-size="12" letter-spacing="3" fill="#8e9db8">V6 / WINDOWS</text>
+</svg>
