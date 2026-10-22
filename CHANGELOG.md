@@ -1,10 +1,12 @@
 # Changelog
 
-## V6.0.0
+## V6.0.0 — documentation and website refresh
 
-- Published a versioned V6 release bundle.
-- Added repository documentation, safe-use checklist, and checksum verification instructions.
-- Added a portable ZIP containing the compiled Windows executable and release metadata.
-- Clarified that original application source code is not included unless separately provided.
+- Reworked repository README into a clear, screenshot-led product guide.
+- Redesigned the static website with responsive layout, vector icons, workspace explorer, screenshot filters and lightbox.
+- Added an explicit RAM Cleaner guide with practical limitations and safety context.
+- Corrected screenshot labels and removed the oversized GitHub-icon rendering pattern.
+- Added UI design tokens, feature guide, deployment instructions and static integrity tests.
+- Optimized the provided anime logo for repository display.
 
-> Note: This release packaging/version label does not by itself prove that the executable's internal application version or feature set has changed. The binary was supplied as an existing EXE.
+> These notes describe repository documentation and website changes. They do not claim changes to the compiled Windows executable.

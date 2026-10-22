@@ -1,105 +1,133 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#080a12">
-<meta name="description" content="ROM Flasher Pro by Mayank Droid — a streamlined Windows utility for Android flashing workflows.">
-<title>ROM Flasher Pro — Mayank Droid</title>
-<link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
-<style>
-:root{color-scheme:dark;--bg:#070910;--panel:#0d111c;--panel2:#101626;--line:#202b40;--text:#f2f6ff;--muted:#a0abc2;--cyan:#54f4ff;--purple:#a78bfa;--green:#8bffcf;--radius:20px;--max:1160px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 12% 0%,#15203a 0,transparent 34%),radial-gradient(ellipse at 88% 10%,#251542 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}button,a{ -webkit-tap-highlight-color:transparent}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-.topline{height:2px;background:linear-gradient(90deg,transparent,var(--cyan),var(--purple),transparent)}header{position:sticky;top:0;z-index:20;background:rgba(7,9,16,.82);backdrop-filter:blur(18px);border-bottom:1px solid #20283a}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.04em}.brand img{width:35px;height:35px}.brand span{font-size:15px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:650}.navlinks{display:flex;align-items:center;gap:24px;color:#c0c9dc;font-size:13px}.navlinks a:hover{color:var(--cyan)}.navcta{border:1px solid #34445f;background:#111a2b;padding:10px 15px;border-radius:11px;font-size:12px;font-weight:750;color:white}.navcta:hover{border-color:var(--cyan);box-shadow:0 0 24px #54f4ff18}
-.hero{padding:86px 0 72px;position:relative;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 11px;border:1px solid #27364d;border-radius:999px;background:#0b1220;color:#cbd6ec;font-size:11px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}.pulse{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-.065em;margin:24px 0 20px;font-weight:850}.gradient{background:linear-gradient(100deg,var(--cyan) 0%,#b7c7ff 46%,var(--purple) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:590px;color:#aeb9ce;font-size:17px;line-height:1.8}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:12px;font-size:13px;font-weight:800;border:1px solid transparent;transition:transform .18s,border-color .18s,box-shadow .18s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(110deg,var(--cyan),#8aa8ff 65%,var(--purple));color:#080b13;box-shadow:0 8px 32px #54f4ff1d}.secondary{border-color:#303b52;background:#101522;color:#f2f6ff}.secondary:hover{border-color:#7c8ba8}.microcopy{font-size:11px;color:#8592ab;margin-top:17px}.microcopy a{color:#d9e3f5;text-decoration:underline;text-decoration-color:#52617d;text-underline-offset:3px}
-.terminal{position:relative;border:1px solid #28354b;background:linear-gradient(145deg,#111827,#080b13 75%);border-radius:22px;box-shadow:0 28px 90px #0008,0 0 60px #8b5cf61a;overflow:hidden;transform:perspective(1100px) rotateY(-4deg) rotateX(2deg)}.terminal:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(130deg,#54f4ff0a,transparent 35%,#a78bfa0b)}.termbar{display:flex;align-items:center;gap:7px;padding:15px 17px;border-bottom:1px solid #263047;background:#0d121e}.dot{width:8px;height:8px;border-radius:50%;background:#45516a}.term-label{margin-left:auto;color:#7e8ba4;font:10px ui-monospace,monospace;letter-spacing:.14em}.term-body{padding:23px 22px 26px;font:12px/2 ui-monospace,SFMono-Regular,Menlo,monospace;color:#b5c3dc}.term-title{font-size:16px;color:white;font-weight:800;letter-spacing:-.04em;margin-bottom:18px}.term-title span{color:var(--cyan)}.term-row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #1c2637;padding:6px 0}.term-row:last-of-type{border-bottom:0}.ok{color:var(--green)}.term-footer{margin-top:19px;border:1px solid #263a46;background:#0a171a;padding:10px 12px;border-radius:10px;color:#9af6d3;font-size:10px}.glow{position:absolute;width:250px;height:250px;filter:blur(85px);border-radius:50%;opacity:.16;pointer-events:none}.glow.one{background:var(--cyan);right:34%;top:16%}.glow.two{background:var(--purple);right:3%;bottom:8%}
-.github-sticker{padding:18px 0 8px}.sticker-inner{display:flex;align-items:center;justify-content:center;gap:16px;border:1px solid #202b40;background:#0b0f19;border-radius:14px;padding:12px 18px}.sticker-label{color:#8e9bb2;font:750 10px ui-monospace,monospace;letter-spacing:.15em}.tenor-gif-embed{width:54px!important;min-width:54px;height:54px;overflow:hidden;border-radius:10px}.tenor-gif-embed iframe{border:0!important}@media(max-width:600px){.sticker-inner{justify-content:space-between}.sticker-label{font-size:9px;letter-spacing:.08em}}
-.section{padding:72px 0;border-top:1px solid #1b2231}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}.kicker{color:var(--cyan);font:750 10px ui-monospace,monospace;letter-spacing:.2em;text-transform:uppercase}.section h2{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.055em;margin:10px 0 0}.section-intro{max-width:480px;color:var(--muted);font-size:14px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}.stat{border:1px solid var(--line);background:#0b0f19b8;border-radius:14px;padding:18px}.stat strong{display:block;font-size:14px}.stat span{font-size:11px;color:var(--muted)}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{border:1px solid var(--line);background:linear-gradient(145deg,#111725bd,#0b0e17);border-radius:17px;padding:23px;min-height:174px}.feature-icon{width:37px;height:37px;border:1px solid #34465c;background:#0b1823;border-radius:11px;display:grid;place-items:center;color:var(--cyan);margin-bottom:19px}.feature-icon svg{width:18px;height:18px}.feature h3{margin:0 0 7px;font-size:15px}.feature p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.shot{margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0c101a}.shot img{display:block;width:100%;height:auto;min-height:150px;object-fit:cover;background:#101522}.shot figcaption{padding:12px 15px;color:#9daac1;font-size:11px;border-top:1px solid #20283a}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:step}.step{counter-increment:step;border:1px solid var(--line);background:#0c101a;border-radius:15px;padding:22px}.step:before{content:"0" counter(step);display:block;font:750 11px ui-monospace,monospace;color:var(--cyan);margin-bottom:15px}.step h3{font-size:14px;margin:0 0 8px}.step p{font-size:12px;color:var(--muted);margin:0}.code{margin-top:12px;padding:12px;border:1px solid #29364a;border-radius:10px;background:#070a11;color:#a5f3fc;font:11px ui-monospace,monospace;overflow-wrap:anywhere}.copy{border:0;background:none;color:var(--cyan);font:700 10px ui-monospace,monospace;cursor:pointer;margin-top:8px;padding:3px 0}.notice{display:flex;gap:14px;border:1px solid #4a3c26;background:#17130d;border-radius:14px;padding:17px 19px;color:#d8c8a7;font-size:12px;margin-top:22px}.notice strong{display:block;color:#ffe2a4;margin-bottom:4px}
-.download-panel{display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;border:1px solid #33415b;border-radius:22px;padding:32px;background:radial-gradient(ellipse at 90% 0%,#49307a50,transparent 43%),linear-gradient(130deg,#111b2b,#0b0d16)}.download-panel h2{font-size:clamp(26px,4vw,38px);margin:8px 0 12px;letter-spacing:-.05em}.download-panel p{color:var(--muted);font-size:13px;margin:0;max-width:600px}.hash{margin-top:18px;color:#8f9bb2;font:10px/1.8 ui-monospace,monospace;overflow-wrap:anywhere}.hash b{color:#c9d4e8;font-weight:500}.download-actions{display:flex;flex-direction:column;gap:10px;min-width:180px}
-footer{border-top:1px solid #1c2433;padding:28px 0 38px;color:#8290a9;font-size:11px}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px}.footlinks{display:flex;flex-wrap:wrap;gap:17px}.foot a:hover{color:var(--cyan)}
-.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#d8fbff;color:#061018;border-radius:10px;padding:10px 15px;font-size:12px;font-weight:800;opacity:0;pointer-events:none;transition:.2s;z-index:50}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:42px}.terminal{max-width:650px;transform:none}.features{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.download-panel{grid-template-columns:1fr}.download-actions{flex-direction:row;flex-wrap:wrap}.stats{margin-top:28px}}
-@media(max-width:600px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav{height:62px}.navlinks{gap:13px}.navlinks a:not(.navcta){display:none}.brand span{font-size:13px}.hero{padding:58px 0 48px}h1{font-size:clamp(40px,12vw,58px)}.lead{font-size:15px}.actions .btn{flex:1}.section{padding:52px 0}.features,.gallery,.steps,.stats{grid-template-columns:1fr}.feature{min-height:0}.download-panel{padding:23px}.foot{align-items:flex-start;flex-direction:column}.term-body{padding:18px 15px}.term-row{font-size:10px}.term-label{font-size:8px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
-</style>
-
-<style>
-.mona-section{padding:64px 0;border-top:1px solid #202b40;background:linear-gradient(110deg,rgba(84,244,255,.045),rgba(167,139,250,.07))}.mona-inner{display:grid;grid-template-columns:1fr minmax(220px,320px);align-items:center;gap:32px}.mona-copy .eyebrow{color:#54f4ff;font-size:.75rem;letter-spacing:.18em;font-weight:800}.mona-copy h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin:.4rem 0 1rem}.mona-copy h2 span{color:#a78bfa}.mona-copy p{color:#a0abc2}.mona-link{display:inline-block;margin-top:10px;color:#54f4ff;border-bottom:1px solid #54f4ff;padding-bottom:3px}.tenor-gif-embed{width:100%;max-width:320px;justify-self:end;border:1px solid #29354c;border-radius:18px;overflow:hidden;background:#0d111c}@media(max-width:680px){.mona-inner{grid-template-columns:1fr}.tenor-gif-embed{justify-self:start;max-width:280px}}
-</style>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="ROM Flasher Pro by Mayank Droid — Windows Android flashing workflows, device checks, terminal visibility and memory tools.">
+  <meta property="og:title" content="ROM Flasher Pro — Mayank Droid">
+  <meta property="og:description" content="Verify the package. Confirm the device. Then flash.">
+  <meta property="og:type" content="website">
+  <title>ROM Flasher Pro — Mayank Droid</title>
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
 </head>
 <body>
-<div class="topline"></div>
-<header><div class="wrap nav">
-<a class="brand" href="#top" aria-label="ROM Flasher Pro home"><img src="./assets/mark.svg" alt=""><span>ROM FLASHER PRO<small>BY MAYANK DROID</small></span></a>
-<nav class="navlinks" aria-label="Main navigation"><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#install">Setup</a><a class="navcta" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid">View on GitHub ↗</a></nav>
-</div></header>
-<main id="top">
-<section class="hero"><div class="glow one"></div><div class="glow two"></div><div class="wrap hero-grid">
-<div><div class="eyebrow"><span class="pulse"></span> WINDOWS ANDROID TOOLKIT <span>·</span> V6.0.0</div>
-<h1>Flash with<br><span class="gradient">more control.</span></h1>
-<p class="lead">A focused Windows utility for ROM-flashing workflows, built for Android enthusiasts who want a clearer interface, practical tools and a more deliberate process.</p>
-<div class="actions"><a class="btn primary" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest/download/ROM_Flasher_Pro_V6.exe"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></svg> Download V6.0.0</a><a class="btn secondary" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid">Explore source ↗</a></div>
-<div class="microcopy">Windows desktop utility · Check the release notes before use · <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases">All releases</a></div>
-<div class="stats"><div class="stat"><strong>V6.0.0</strong><span>Current project release</span></div><div class="stat"><strong>Windows</strong><span>Desktop workflow</span></div><div class="stat"><strong>Open source</strong><span>Review the repository</span></div></div>
-</div>
-<div class="terminal" aria-label="Illustrative interface preview"><div class="termbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-label">ROM_FLASHER_PRO / CONTROL</span></div><div class="term-body"><div class="term-title">SYSTEM <span>///</span> READY</div><div class="term-row"><span>DEVICE INTERFACE</span><span class="ok">ADB / FASTBOOT</span></div><div class="term-row"><span>WORKFLOW</span><span>USER CONTROLLED</span></div><div class="term-row"><span>PACKAGE</span><span>V6.0.0</span></div><div class="term-row"><span>VERIFICATION</span><span class="ok">CHECK RELEASE HASH</span></div><div class="term-row"><span>EXECUTION</span><span>CONFIRM BEFORE FLASH</span></div><div class="term-footer">STATUS: REVIEW DEVICE + PACKAGE BEFORE EXECUTION</div></div></div>
-</div></section>
-<section class="github-sticker" aria-label="GitHub loading animation"><div class="wrap sticker-inner"><span class="sticker-label">BUILT FOR THE GITHUB WORKFLOW</span><div class="tenor-gif-embed" data-postid="7739926769025390653" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/mona-github-loading-github-mona-gif-7739926769025390653">Mona GitHub Loading GIF</a></div></div></section>
-<section class="section" id="features"><div class="wrap"><div class="section-head"><div><div class="kicker">01 / CAPABILITIES</div><h2>Designed around the workflow.</h2></div><p class="section-intro">A cleaner product story, straightforward navigation and clear safety guidance—without pretending the tool can eliminate flashing risks.</p></div>
-<div class="features">
-<article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 6h6M9 18h6"/></svg></div><h3>Device workflow</h3><p>Keep device state and connection checks central to the process. Confirm the detected mode before continuing.</p></article>
-<article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></div><h3>Practical interface</h3><p>A focused tool layout intended to make common actions and relevant information easier to locate.</p></article>
-<article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 20 6v5c0 5-3.4 8-8 10-4.6-2-8-5-8-10V6z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></div><h3>Verify before use</h3><p>Use the release notes and published checksum where available. Never flash an unknown or mismatched package.</p></article>
-<article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5m0 14h16"/><path d="m7 15 4-4 3 2 5-6"/></svg></div><h3>Release history</h3><p>Review changes and known limitations in the repository before updating from an older version.</p></article>
-<article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 8 3 12l5 4M16 8l5 4-5 4M14 5l-4 14"/></svg></div><h3>Transparent source</h3><p>Visit the public repository to inspect the project files, documentation and reported issues.</p></article>
-<article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="8.5"/></svg></div><h3>Clear setup path</h3><p>Use the official release and follow the project documentation for prerequisites and device-specific steps.</p></article>
-</div></div></section>
-<section class="section" id="screenshots"><div class="wrap"><div class="section-head"><div><div class="kicker">02 / PRODUCT GALLERY</div><h2>See the actual application.</h2></div><p class="section-intro">Screenshots are loaded from the project repository. If a file is renamed, update its matching path below.</p></div>
-<div class="gallery">
-<figure class="shot"><img loading="lazy" src="https://raw.githubusercontent.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/main/1.png" alt="ROM Flasher Pro screenshot 1"><figcaption>01 — Main application view</figcaption></figure>
-<figure class="shot"><img loading="lazy" src="https://raw.githubusercontent.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/main/2.png" alt="ROM Flasher Pro screenshot 2"><figcaption>02 — Workflow view</figcaption></figure>
-<figure class="shot"><img loading="lazy" src="https://raw.githubusercontent.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/main/3.png" alt="ROM Flasher Pro screenshot 3"><figcaption>03 — Tool details</figcaption></figure>
-<figure class="shot"><img loading="lazy" src="https://raw.githubusercontent.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/main/4.png" alt="ROM Flasher Pro screenshot 4"><figcaption>04 — Additional interface</figcaption></figure>
-</div><p class="microcopy">More screenshots: <a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid">browse the repository</a>.</p>
-</div></section>
-<section class="section" id="install"><div class="wrap"><div class="section-head"><div><div class="kicker">03 / GET STARTED</div><h2>Prepare before you flash.</h2></div><p class="section-intro">Use the official release and check your device-specific instructions. The wrong image or flashing method can erase data or make a device unbootable.</p></div>
-<div class="steps">
-<article class="step"><h3>Read the release</h3><p>Review supported workflows, release notes and any model-specific limitations.</p><div class="code">github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases</div></article>
-<article class="step"><h3>Prepare the device</h3><p>Back up important data, charge the device and install the correct OEM USB drivers where required.</p><div class="code">Confirm model · mode · package</div></article>
-<article class="step"><h3>Verify and proceed</h3><p>Compare the downloaded file's SHA-256 with the value published for that exact release, then follow the app's instructions.</p><div class="code">Get-FileHash .\ROM_Flasher_Pro_V6.exe -Algorithm SHA256</div><button class="copy" data-copy="Get-FileHash .\ROM_Flasher_Pro_V6.exe -Algorithm SHA256">COPY POWERSHELL COMMAND</button></article>
-</div>
-<div class="notice"><div aria-hidden="true">!</div><div><strong>Important safety note</strong>Flashing can erase data or damage a device if the image, partition, bootloader state or procedure is incorrect. Use files intended for your exact device model. This page is not a substitute for the device manufacturer's instructions.</div></div>
-</div></section>
-<section class="section" id="download"><div class="wrap"><div class="download-panel"><div><div class="kicker">04 / OFFICIAL RELEASE</div><h2>Get ROM Flasher Pro.</h2><p>Download from the project's GitHub release channel so you can review release details and verify the matching file before running it.</p><div class="hash"><b>Published SHA-256 (verify against the current release):</b><br>2834E7E3D84819EFE4238D3018CFECCA710B3801A6295177972716A27FA7979E</div><button class="copy" data-copy="2834E7E3D84819EFE4238D3018CFECCA710B3801A6295177972716A27FA7979E">COPY SHA-256</button></div><div class="download-actions"><a class="btn primary" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest/download/ROM_Flasher_Pro_V6.exe">Download EXE ↗</a><a class="btn secondary" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases">Release notes ↗</a><a class="btn secondary" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/issues">Report an issue ↗</a></div></div></div></section>
-</main>
-<footer><div class="wrap foot"><div>© <span id="year"></span> Mayank Droid · ROM Flasher Pro</div><div class="footlinks"><a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid">GitHub</a><a href="https://youtube.com/@mayankdroid">YouTube</a><a href="https://t.me/MayankDroid7">Telegram</a><a href="https://mayank-droid.pages.dev">Developer site</a></div></div></footer>
-<div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard</div>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-const tenorScript = document.createElement('script');
-tenorScript.src = 'https://tenor.com/embed.js';
-tenorScript.async = true;
-document.body.appendChild(tenorScript);
-const toast = document.getElementById('toast');
-document.querySelectorAll('[data-copy]').forEach(button => button.addEventListener('click', async () => {
-  const value = button.getAttribute('data-copy');
-  try {
-    await navigator.clipboard.writeText(value);
-    toast.textContent = 'Copied to clipboard';
-  } catch (_) {
-    const field = document.createElement('textarea'); field.value = value; field.style.position = 'fixed'; field.style.opacity = '0';
-    document.body.appendChild(field); field.select();
-    const ok = document.execCommand('copy'); field.remove();
-    toast.textContent = ok ? 'Copied to clipboard' : 'Copy failed — select the text manually';
-  }
-  toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 1800);
-}));
-</script>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="#top" aria-label="ROM Flasher Pro home">
+        <img class="brand-mark" src="./assets/mark.svg" alt="">
+        <span class="brand-copy">ROM FLASHER PRO <small>BY MAYANK DROID</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a><a href="#workspaces">Workspaces</a><a href="#gallery">Gallery</a><a href="#setup">Safety & setup</a>
+        <a class="nav-github" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid" target="_blank" rel="noreferrer"><img src="./assets/icons/github.svg" alt="" width="17" height="17"> GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero section-shell" id="top">
+      <div class="ambient ambient-cyan" aria-hidden="true"></div><div class="ambient ambient-violet" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> WINDOWS ANDROID TOOLKIT <span class="eyebrow-sep">/</span> V6.0.0</div>
+          <h1>Flash with<br><span class="gradient-text">more control.</span></h1>
+          <p class="hero-lead">A focused Windows interface for Android flashing workflows—with clearer navigation, device status visibility, terminal output and practical memory tools.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest"><img src="./assets/icons/download.svg" alt="" width="18" height="18"> Latest release <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid" target="_blank" rel="noreferrer"><img src="./assets/icons/github.svg" alt="" width="18" height="18"> Explore repository</a>
+          </div>
+          <p class="hero-note">Check release details and package integrity before use. This website does not execute device commands.</p>
+          <div class="hero-proof"><div><span class="proof-num">V6.0.0</span><span class="proof-label">Project version</span></div><div><span class="proof-num">Windows</span><span class="proof-label">Desktop workflow</span></div><div><span class="proof-num">SVG</span><span class="proof-label">Vector icon system</span></div></div>
+        </div>
+        <div class="hero-preview-wrap">
+          <div class="preview-caption"><span class="live-dot"></span> APPLICATION PREVIEW <span class="caption-muted">/ INTERFACE REFERENCE</span></div>
+          <button class="hero-preview" type="button" data-lightbox="./screenshots/1.png" aria-label="Open full AOSP workspace screenshot">
+            <img src="./screenshots/1.png" alt="ROM Flasher Pro AOSP Custom ROM workspace screenshot">
+            <span class="preview-overlay"><span class="preview-tag">01 / AOSP WORKSPACE</span><span class="preview-open">Open screenshot ↗</span></span>
+          </button>
+          <div class="preview-foot"><span><img src="./assets/icons/shield.svg" alt="" width="15" height="15"> Verify package compatibility</span><span>UI documentation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Project capabilities"><div class="container ticker-inner"><span>ADB / FASTBOOT</span><i></i><span>ROM WORKFLOWS</span><i></i><span>KERNEL & RECOVERY</span><i></i><span>TERMINAL VISIBILITY</span><i></i><span>RAM CLEANER</span></div></section>
+
+    <section class="section-shell section-padding" id="features">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">01 / CAPABILITIES</p><h2>One workspace.<br><span class="muted-heading">Distinct workflows.</span></h2></div><p class="section-intro">A modern product surface built around the controls visible in the supplied application screenshots. Labels describe the UI; actual operations depend on the installed build, device state and permissions.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card"><div class="icon-frame cyan-frame"><img src="./assets/icons/package.svg" alt="" width="22" height="22"></div><div class="card-index">01 / FLASH</div><h3>AOSP & custom ROM</h3><p>Firmware archive/image selection, partition checklist and a guided-looking Auto Flash entry point.</p><a href="#workspaces" data-workspace-link="aosp">View workspace <span>↗</span></a></article>
+          <article class="feature-card"><div class="icon-frame violet-frame"><img src="./assets/icons/device.svg" alt="" width="22" height="22"></div><div class="card-index">02 / XIAOMI</div><h3>HyperOS / MIUI</h3><p>ROM source selection, MiFlash script modes and an Anti-Rollback Guard toggle in the UI.</p><a href="#workspaces" data-workspace-link="hyperos">View workspace <span>↗</span></a></article>
+          <article class="feature-card"><div class="icon-frame cyan-frame"><img src="./assets/icons/cpu.svg" alt="" width="22" height="22"></div><div class="card-index">03 / PARTITIONS</div><h3>Kernel & recovery</h3><p>ZIP/IMG selection with boot, recovery, init_boot, vendor_boot and dtbo target choices.</p><a href="#workspaces" data-workspace-link="kernel">View workspace <span>↗</span></a></article>
+          <article class="feature-card"><div class="icon-frame violet-frame"><img src="./assets/icons/terminal.svg" alt="" width="22" height="22"></div><div class="card-index">04 / DIAGNOSTICS</div><h3>Terminal console</h3><p>Dedicated log surface for app-reported ADB/Fastboot/MiFlash output and device context.</p><a href="#workspaces" data-workspace-link="console">View workspace <span>↗</span></a></article>
+          <article class="feature-card feature-card-highlight"><div class="icon-frame green-frame"><img src="./assets/icons/memory.svg" alt="" width="22" height="22"></div><div class="card-index">05 / WINDOWS UTILITY</div><h3>RAM Cleaner</h3><p>Memory-area checklist, physical RAM readout and a Windows memory-optimization action. Results vary by system.</p><a href="#ram-cleaner">Explore RAM Cleaner <span>↗</span></a></article>
+          <article class="feature-card"><div class="icon-frame cyan-frame"><img src="./assets/icons/activity.svg" alt="" width="22" height="22"></div><div class="card-index">06 / DEVICE STATE</div><h3>Status & progress</h3><p>Device search state, refresh control, battery/slot fields and a workflow progress ring.</p><a href="#gallery">View screenshots <span>↗</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell workspace-section" id="workspaces">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">02 / INTERFACE EXPLORER</p><h2>Choose a workflow.<br><span class="muted-heading">See its controls.</span></h2></div><p class="section-intro">Switch between screenshot-led workspace notes. This explorer is a documentation preview, not a remote flashing interface.</p></div>
+        <div class="workspace-layout">
+          <div class="workspace-tabs" role="tablist" aria-label="Application workspaces">
+            <button class="workspace-tab is-active" type="button" role="tab" id="tab-aosp" aria-selected="true" aria-controls="workspace-panel" data-workspace="aosp"><span class="tab-number">01</span><img src="./assets/icons/package.svg" alt="" width="18" height="18"> AOSP / Custom ROM</button>
+            <button class="workspace-tab" type="button" role="tab" id="tab-hyperos" aria-selected="false" aria-controls="workspace-panel" data-workspace="hyperos"><span class="tab-number">02</span><img src="./assets/icons/device.svg" alt="" width="18" height="18"> HyperOS / MIUI</button>
+            <button class="workspace-tab" type="button" role="tab" id="tab-kernel" aria-selected="false" aria-controls="workspace-panel" data-workspace="kernel"><span class="tab-number">03</span><img src="./assets/icons/cpu.svg" alt="" width="18" height="18"> Kernel & Recovery</button>
+            <button class="workspace-tab" type="button" role="tab" id="tab-console" aria-selected="false" aria-controls="workspace-panel" data-workspace="console"><span class="tab-number">04</span><img src="./assets/icons/terminal.svg" alt="" width="18" height="18"> Terminal Console</button>
+            <button class="workspace-tab" type="button" role="tab" id="tab-ram" aria-selected="false" aria-controls="workspace-panel" data-workspace="ram"><span class="tab-number">05</span><img src="./assets/icons/memory.svg" alt="" width="18" height="18"> RAM Cleaner</button>
+          </div>
+          <article class="workspace-panel" id="workspace-panel" role="tabpanel" aria-labelledby="tab-aosp" tabindex="0">
+            <div class="workspace-copy"><div class="panel-meta"><span class="live-dot"></span><span id="panel-code">WORKSPACE 01</span><span class="meta-line"></span><span class="panel-meta-soft">SCREENSHOT REFERENCE</span></div><h3 id="panel-title">AOSP / Custom ROM</h3><p id="panel-description">Select a firmware ZIP or image and carefully review the visible Fastboot partition checklist before using any flashing control.</p><ul class="control-list" id="panel-controls"><li>Firmware ZIP / IMG selector</li><li>Fastboot partition checklist</li><li>Auto Flash entry point</li><li>Fastboot and reboot controls</li></ul><div class="panel-warning" id="panel-warning"><img src="./assets/icons/alert.svg" alt="" width="16" height="16"><span>Potentially destructive. Confirm package, model and partition instructions first.</span></div><a class="text-link" id="panel-doc-link" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/blob/main/docs/FEATURES.md">Read workspace notes <span>↗</span></a></div>
+            <button class="workspace-image" id="panel-image-button" type="button" data-lightbox="./screenshots/1.png" aria-label="Open workspace screenshot"><img id="panel-image" src="./screenshots/1.png" alt="AOSP custom ROM workspace"><span>EXPAND IMAGE <span aria-hidden="true">↗</span></span></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-padding ram-section" id="ram-cleaner">
+      <div class="container ram-grid">
+        <div class="ram-copy"><p class="section-kicker">03 / WINDOWS MEMORY TOOL</p><h2>RAM Cleaner.<br><span class="gradient-text">With context.</span></h2><p class="section-intro ram-intro">The supplied screen shows a Windows Memory Cleaner dialog with physical RAM telemetry and selectable memory areas. The redesign documents the interface without promising a universal speed boost.</p>
+          <div class="ram-points"><div><span class="point-check">✓</span><div><strong>Physical RAM overview</strong><span>Used/free display and progress indicator shown in the screenshot.</span></div></div><div><span class="point-check">✓</span><div><strong>Selectable memory areas</strong><span>Page lists, file cache, registry cache, standby lists, system file cache and working set.</span></div></div><div><span class="point-check">✓</span><div><strong>Use-aware messaging</strong><span>Save work and expect temporary effects; memory cleaning is not a RAM upgrade.</span></div></div></div>
+          <div class="ram-disclaimer"><img src="./assets/icons/alert.svg" alt="" width="17" height="17"><p><strong>Important</strong> Reclaiming cached memory can make applications rebuild caches and may not improve responsiveness. The screenshot alone cannot verify exact low-level behavior or results on each Windows build.</p></div>
+        </div>
+        <button class="ram-screenshot" type="button" data-lightbox="./screenshots/3.png" aria-label="Open RAM Cleaner screenshot"><img src="./screenshots/3.png" alt="Windows Memory Cleaner dialog showing physical RAM and memory-area checklist"><span class="ram-shot-caption"><span><img src="./assets/icons/memory.svg" alt="" width="17" height="17"> MEMORY-OPTIMIZATION INTERFACE</span><span>Open full view ↗</span></span></button>
+      </div>
+    </section>
+
+    <section class="section-shell section-padding" id="gallery">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">04 / SCREENSHOT GALLERY</p><h2>Real screens.<br><span class="muted-heading">Clear documentation.</span></h2></div><p class="section-intro">Filter by area or open any screenshot for a larger view. Images are included locally with this repository; no third-party image service is required.</p></div>
+        <div class="gallery-tools"><div class="gallery-filters" role="group" aria-label="Filter screenshot gallery"><button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All screens <span>07</span></button><button class="filter-btn" type="button" data-filter="flash" aria-pressed="false">Flashing <span>03</span></button><button class="filter-btn" type="button" data-filter="system" aria-pressed="false">System tools <span>02</span></button><button class="filter-btn" type="button" data-filter="console" aria-pressed="false">Console & links <span>02</span></button></div><span class="gallery-total" id="gallery-total" aria-live="polite">Showing 7 screenshots</span></div>
+        <div class="gallery-grid">
+          <figure class="gallery-card" data-category="flash"><button type="button" data-lightbox="./screenshots/1.png" aria-label="Open AOSP Custom ROM screenshot"><img loading="lazy" src="./screenshots/1.png" alt="AOSP Custom ROM workspace"><span class="image-open">↗</span></button><figcaption><span>01 / FIRMWARE</span><strong>AOSP / Custom ROM</strong><p>ZIP/IMG input and Fastboot partition list.</p></figcaption></figure>
+          <figure class="gallery-card" data-category="flash"><button type="button" data-lightbox="./screenshots/4.png" aria-label="Open HyperOS MIUI screenshot"><img loading="lazy" src="./screenshots/4.png" alt="Xiaomi HyperOS and MIUI MiFlash workspace"><span class="image-open">↗</span></button><figcaption><span>02 / XIAOMI</span><strong>HyperOS / MIUI</strong><p>ROM source, script mode choices and ARB Guard.</p></figcaption></figure>
+          <figure class="gallery-card" data-category="flash"><button type="button" data-lightbox="./screenshots/5.png" aria-label="Open kernel and recovery screenshot"><img loading="lazy" src="./screenshots/5.png" alt="Kernel and Recovery workspace"><span class="image-open">↗</span></button><figcaption><span>03 / PARTITIONS</span><strong>Kernel & Recovery</strong><p>Image selection and target partition controls.</p></figcaption></figure>
+          <figure class="gallery-card" data-category="console"><button type="button" data-lightbox="./screenshots/6.png" aria-label="Open terminal console screenshot"><img loading="lazy" src="./screenshots/6.png" alt="Terminal console with application logs"><span class="image-open">↗</span></button><figcaption><span>04 / DIAGNOSTICS</span><strong>Terminal Console</strong><p>Workflow output with status and progress panels.</p></figcaption></figure>
+          <figure class="gallery-card" data-category="console"><button type="button" data-lightbox="./screenshots/7.png" aria-label="Open official links screenshot"><img loading="lazy" src="./screenshots/7.png" alt="Official project links dialog"><span class="image-open">↗</span></button><figcaption><span>05 / LINKS</span><strong>Official Links</strong><p>Project and community shortcuts dialog.</p></figcaption></figure>
+          <figure class="gallery-card" data-category="system"><button type="button" data-lightbox="./screenshots/3.png" aria-label="Open RAM Cleaner screenshot"><img loading="lazy" src="./screenshots/3.png" alt="Windows Memory Cleaner screenshot"><span class="image-open">↗</span></button><figcaption><span>06 / MEMORY</span><strong>RAM Cleaner</strong><p>Native Windows memory-optimization dialog.</p></figcaption></figure>
+          <figure class="gallery-card" data-category="system"><button type="button" data-lightbox="./screenshots/2.png" aria-label="Open additional app screenshot"><img loading="lazy" src="./screenshots/2.png" alt="Additional ROM Flasher Pro application view"><span class="image-open">↗</span></button><figcaption><span>07 / OVERVIEW</span><strong>Application overview</strong><p>Device status, progress and navigation structure.</p></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-padding setup-section" id="setup">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">05 / BEFORE YOU BEGIN</p><h2>Make the safe path<br><span class="muted-heading">the easy path.</span></h2></div><p class="section-intro">A good interface still cannot protect a device from an incorrect firmware package. Verify the fundamentals before you start.</p></div>
+        <div class="setup-grid"><article class="setup-card"><span>01</span><img src="./assets/icons/package.svg" alt="" width="22" height="22"><h3>Verify the package</h3><p>Check model/codename, region, package source, release notes and matching SHA-256 where available.</p></article><article class="setup-card"><span>02</span><img src="./assets/icons/device.svg" alt="" width="22" height="22"><h3>Confirm the device</h3><p>Back up data, confirm ADB/Fastboot mode and install the correct OEM driver if needed.</p></article><article class="setup-card"><span>03</span><img src="./assets/icons/shield.svg" alt="" width="22" height="22"><h3>Understand the action</h3><p>Read the selected mode carefully. Wipes, partition erases and bootloader changes can be irreversible.</p></article></div>
+        <aside class="safety-banner"><div class="safety-icon"><img src="./assets/icons/alert.svg" alt="" width="22" height="22"></div><div><strong>Flashing can erase data or make a phone unbootable.</strong><p>Never select a ROM, partition or bootloader option by guesswork. Use trusted instructions for your exact device and stop when anything does not match.</p></div><a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/blob/main/docs/INSTALLATION.md">Read safety guide <span>↗</span></a></aside>
+      </div>
+    </section>
+
+    <section class="section-shell release-section" id="download"><div class="container release-panel"><div class="release-copy"><p class="section-kicker">06 / OFFICIAL RELEASE</p><h2>Get the official build.</h2><p>Use the GitHub Releases page to check version details and download the current artifact. The website does not host or alter the application binary.</p><div class="release-meta"><span class="status-dot"></span> <span>VERSION LABEL: V6.0.0</span><span class="meta-separator">/</span><span>WINDOWS DESKTOP</span></div></div><div class="release-actions"><a class="button button-primary" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest"><img src="./assets/icons/download.svg" alt="" width="18" height="18"> Open latest release <span>↗</span></a><a class="button button-secondary" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases">View all releases</a><a class="button button-secondary" href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/issues">Report an issue</a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-top"><a class="brand" href="#top"><img class="brand-mark" src="./assets/mark.svg" alt=""><span class="brand-copy">ROM FLASHER PRO<small>BY MAYANK DROID</small></span></a><p>Verify the package. Confirm the device. Then flash.</p><a class="back-top" href="#top">Back to top ↑</a></div><div class="container footer-bottom"><span>© <span id="year"></span> Mayank Droid. Interface documentation & project links.</span><nav aria-label="Footer navigation"><a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid">GitHub</a><a href="https://youtube.com/@mayankdroid">YouTube</a><a href="https://t.me/MayankDroid7">Telegram</a><a href="https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/blob/main/docs/FEATURES.md">Feature notes</a></nav></div></footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer"><form method="dialog"><button class="lightbox-close" aria-label="Close screenshot viewer">×</button></form><img id="lightbox-image" src="./screenshots/1.png" alt="Expanded application screenshot"><p id="lightbox-caption">Application screenshot</p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

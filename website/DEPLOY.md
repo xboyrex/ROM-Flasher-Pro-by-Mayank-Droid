@@ -1,25 +1,32 @@
-# ROM Flasher Pro — Cyberpunk UI Redesign
+# ROM Flasher Pro — static website
 
-Static, responsive website and redesigned GitHub README for ROM Flasher Pro by Mayank Droid.
-
-## Files
-- `index.html` — responsive website, feature sections, real project links, screenshot gallery, release CTA, copy-to-clipboard actions.
-- `README.md` — redesigned repository landing page.
-- `assets/mark.svg` — vector favicon/brand mark.
-- `assets/rom-flasher-banner.svg` — vector README hero banner.
+A responsive, dependency-free website and interface documentation gallery for ROM Flasher Pro by Mayank Droid.
 
 ## Preview locally
-Open `index.html` in a browser. No build step or external JavaScript framework is required. Screenshot images are served from the existing GitHub repository.
 
-## Deploy to Cloudflare Pages
-1. Add these files to the project repository root (or deploy this folder as a separate static project).
-2. In Cloudflare Pages, connect the Git repository.
-3. Framework preset: **None**.
-4. Build command: leave empty.
-5. Build output directory: `/` (the folder containing `index.html`).
-6. Deploy.
+Open `index.html` in a modern browser. No Node install, package manager or build command is required. All CSS, JavaScript, SVG icons and screenshot images are bundled in this directory.
 
-If you want to replace the project's current README, copy this package's `README.md` to the root of `xboyrex/ROM-Flasher-Pro-by-Mayank-Droid` and commit it. Back up the existing README first.
+## Cloudflare Pages
+
+Create or edit the Pages project settings:
+
+- **Production branch:** `main`
+- **Root directory:** `website`
+- **Framework preset:** `None`
+- **Build command:** leave empty
+- **Build output directory:** `.`
+
+The site uses relative paths, so `website/` can be deployed as a self-contained static directory. Feature and installation links point to the repository docs on GitHub, so they continue to work when `website/` is deployed as a standalone static root.
+
+## Included features
+
+- Responsive desktop/mobile header and accessible mobile navigation.
+- Feature cards for AOSP, HyperOS/MIUI, Kernel & Recovery, Terminal Console, RAM Cleaner and device status.
+- Interactive workspace explorer using the included screenshots.
+- Filterable screenshot gallery with a native dialog lightbox.
+- Local SVG icon set, no icon CDN dependency.
+- Reduced-motion support, visible focus states and semantic sections.
 
 ## Important
-The SHA-256 value displayed in the website is the value supplied for the current project context. Verify it against the exact release asset before publishing; update it when the release changes. The download button points to the existing release asset URL.
+
+This is a product site/documentation layer. It does not connect to a phone, execute ADB/Fastboot commands, flash firmware or modify Windows memory. The screenshots represent the provided app UI. Confirm the executable's real behavior independently.
