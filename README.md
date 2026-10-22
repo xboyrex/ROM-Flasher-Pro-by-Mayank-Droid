@@ -1,3 +1,6 @@
+
+![ROM Flasher Pro Logo](assets/logo.png)
+
 <div align="center">
 
 <img src="assets/rom-flasher-banner.svg" alt="ROM Flasher Pro — Mayank Droid" width="100%">
