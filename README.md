@@ -1,133 +1,246 @@
 <div align="center">
-  <img src="assets/logo.png" alt="ROM Flasher Pro anime mark" width="112" height="112" style="border-radius:22px">
-  <br>
-  <img src="assets/rom-flasher-banner.svg" alt="ROM Flasher Pro by Mayank Droid" width="100%">
 
-  # ROM FLASHER PRO · V6.0.0
-  **Android flashing toolkit for Windows · By Mayank Droid**
+<img src="assets/logo.png" width="86" alt="ROM Flasher Pro anime logo" />
 
-  [![Latest Release](https://img.shields.io/github/v/release/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid?style=for-the-badge&label=latest%20release&color=4fe3ee)](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest)
-  [![Issues](https://img.shields.io/github/issues/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid?style=for-the-badge&color=9b82f4)](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/issues)
-  [![License](https://img.shields.io/badge/source%20status-binary%20package%20%2B%20docs-35445e?style=for-the-badge)](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid)
+<img src="assets/cyberpunk-banner.gif" width="100%" alt="Original animated cyberpunk anime banner — cyan and violet neon" />
 
-  **Verify the package. Confirm the device. Then flash.**
+# ROM FLASHER PRO
 
-  [Download Latest Release](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest) · [Project Website](https://mayank-droid.pages.dev/) · [Report a Bug](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/issues)
+**V6.0.0 · CYBERPUNK EDITION · BY MAYANK DROID**
+
+<img src="https://img.shields.io/badge/RELEASE-V6.0.0-8B5CF6?style=for-the-badge&logo=github&logoColor=white" alt="Release version 6.0.0" />
+<img src="https://img.shields.io/badge/PLATFORM-WINDOWS-2563EB?style=for-the-badge&logo=windows&logoColor=white" alt="Windows platform" />
+<img src="https://img.shields.io/badge/VISUALS-CYAN%20%2F%20VIOLET-101827?style=for-the-badge" alt="Cyan and violet design" />
+
+[**LATEST RELEASE**](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest) · [PROJECT WEBSITE](https://mayank-droid.pages.dev/) · [ISSUES](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/issues)
+
+<sub>VERIFY THE PACKAGE. CONFIRM THE DEVICE. THEN FLASH.</sub>
+
 </div>
 
 ---
 
-## Overview
+## <img src="assets/icons/layers.svg" width="19" height="19" alt="" /> Overview
 
-ROM Flasher Pro is presented as a Windows desktop utility for Android firmware workflows. Its interface groups AOSP/custom ROM, Xiaomi HyperOS/MIUI, kernel/recovery, terminal, device-status, progress, driver readiness and Windows memory-optimization controls into a single workspace.
+ROM Flasher Pro is presented as a Windows desktop toolkit interface for Android ROM, Fastboot, HyperOS/MIUI, kernel/recovery and device-maintenance workflows. Its interface brings device status, console output, workflow progress, driver readiness and Windows memory-optimization controls into one workspace.
 
-> **Repository status:** the tracked repository contains documentation, UI assets, screenshots and release metadata. It does **not** currently contain the original application source tree or the Windows executable itself. The website and documentation redesign in this package does not modify or independently verify the behavior of the compiled application.
+> **Project status:** this repository contains documentation, UI assets, screenshots and release metadata. The original application source tree and the compiled Windows executable are not tracked in the repository; the executable is distributed through GitHub Releases. The interface shown in screenshots does not independently prove that every operation works on every device or Windows build.
 
-## Interface tour
+## <img src="assets/icons/activity.svg" width="19" height="19" alt="" /> Interface preview
 
 <table>
-  <tr><td width="50%"><img src="docs/readme-screenshots/1.png" alt="AOSP custom ROM workspace" width="100%"><br><b>01 · AOSP / Custom ROM</b><br>Firmware selection, partition controls and Auto Flash entry point.</td><td width="50%"><img src="docs/readme-screenshots/4.png" alt="HyperOS MIUI workflow" width="100%"><br><b>02 · HyperOS / MIUI MiFlash</b><br>ROM archive/folder selection, script modes and ARB Guard.</td></tr>
-  <tr><td><img src="docs/readme-screenshots/5.png" alt="Kernel recovery interface" width="100%"><br><b>03 · Kernel & Recovery</b><br>ZIP/IMG selection and target partition choices.</td><td><img src="docs/readme-screenshots/6.png" alt="Terminal Console interface" width="100%"><br><b>04 · Terminal Console</b><br>ADB/Fastboot/MiFlash-labelled output and clear control.</td></tr>
-  <tr><td><img src="docs/readme-screenshots/7.png" alt="Official links dialog" width="100%"><br><b>05 · Official Links</b><br>Quick access to project and community destinations.</td><td><img src="docs/readme-screenshots/3.png" alt="RAM Cleaner interface" width="100%"><br><b>06 · RAM Cleaner</b><br>Physical RAM display, memory-area checklist and optimization action.</td></tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/aosp-custom-rom.png"><img src="docs/readme-screenshots/aosp-custom-rom.png" alt="AOSP custom ROM workspace" width="100%" /></a><br /><strong>AOSP / Custom ROM</strong><br /><sub>Firmware selection and Fastboot partition controls.</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/hyperos-miui.png"><img src="docs/readme-screenshots/hyperos-miui.png" alt="HyperOS MIUI workspace" width="100%" /></a><br /><strong>HyperOS / MIUI</strong><br /><sub>ROM selection, script modes and ARB Guard.</sub></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/kernel-recovery.png"><img src="docs/readme-screenshots/kernel-recovery.png" alt="Kernel and recovery workspace" width="100%" /></a><br /><strong>Kernel &amp; Recovery</strong><br /><sub>ZIP/IMG selection and target partition.</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/terminal-console.png"><img src="docs/readme-screenshots/terminal-console.png" alt="Terminal console workspace" width="100%" /></a><br /><strong>Terminal Console</strong><br /><sub>Application-reported ADB/Fastboot/MiFlash output.</sub></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/ram-cleaner.png"><img src="docs/readme-screenshots/ram-cleaner.png" alt="Windows RAM Cleaner interface" width="100%" /></a><br /><strong>RAM Cleaner</strong><br /><sub>RAM summary and memory-area controls.</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/official-links.png"><img src="docs/readme-screenshots/official-links.png" alt="Official links dialog" width="100%" /></a><br /><strong>Official Links</strong><br /><sub>Project, service and community shortcuts.</sub></td>
+</tr>
 </table>
 
-## Workspaces and visible controls
+<sub>Select any screenshot to open the full-size image.</sub>
 
-| Workspace | Visible interface areas |
+## <img src="assets/icons/cpu.svg" width="19" height="19" alt="" /> Workspaces
+
+| Module | Visible controls and purpose |
 |---|---|
-| **AOSP / Custom ROM** | Firmware ZIP/IMG selection, Fastboot partition checklist, Auto Flash entry point, destructive-action controls and reboot controls |
-| **HyperOS / MIUI MiFlash** | Fastboot ROM archive/folder or Recovery ZIP selector, Clean All / Save User Data / Clean All & Lock modes, ARB Guard toggle |
-| **Kernel & Recovery** | ZIP/IMG selector, target partition choices such as `boot`, `recovery`, `init_boot`, `vendor_boot` and `dtbo` |
-| **Terminal Console** | Application-reported ADB/Fastboot/MiFlash output, Clear control and device-status side panel |
-| **Device Status** | Device search status, Refresh control, battery/slot fields and an automated progress ring |
-| **RAM Cleaner / Windows Memory Cleaner** | Physical RAM summary, memory-area checkboxes and Optimize Memory Now action |
-| **Drivers & ADB** | Driver/ADB readiness indicator |
-| **Official Links** | Project, service and Telegram shortcuts |
+| **AOSP / Custom ROM** | Firmware ZIP/IMG selection, Fastboot partition checklist, Auto Flash entry point and reboot controls. |
+| **HyperOS / MIUI** | Fastboot ROM archive/folder or Recovery ZIP, Clean All / Save User Data / Clean All & Lock modes, ARB Guard. |
+| **Kernel & Recovery** | ZIP/IMG selector and partitions including `boot`, `recovery`, `init_boot`, `vendor_boot` and `dtbo`. |
+| **Terminal Console** | Application-reported ADB/Fastboot/MiFlash output and a clear control. |
+| **Device Status** | Device search status, Refresh control, battery/slot fields and workflow progress indicator. |
+| **RAM Cleaner** | Physical RAM display, memory-area checklist and an Optimize Memory Now action. |
+| **Drivers & ADB** | Driver and ADB readiness indicator. |
 
-### RAM Cleaner: what the screenshot shows
+## <img src="assets/icons/memory-stick.svg" width="19" height="19" alt="" /> RAM Cleaner notes
 
-The screenshot shows a **Windows memory-optimization dialog** with native-API-labelled controls. Visible memory areas include Combined Page List, Modified File Cache, Modified Page List, Registry Cache, Standby List, Low Priority Standby List, System File Cache and Working Set. The presence of a control does not independently prove the cleaner's effect on every Windows build.
+The screenshot shows a Windows memory-optimization panel with native-API-labelled controls. Visible areas include Combined Page List, Modified File Cache, Modified Page List, Registry Cache, Standby List, Low Priority Standby List, System File Cache and Working Set.
 
-Memory optimization is not a replacement for sufficient RAM, closing memory-heavy applications or fixing a software leak. Save work before use and review the selected areas. Avoid claims that this can permanently “boost” every PC.
+Memory optimization does not guarantee higher performance or permanently increase available RAM. Save open work, review selected areas and close unnecessary applications first. The actual result depends on the implementation and Windows environment.
 
-## Download and verify
+## <img src="assets/icons/download.svg" width="19" height="19" alt="" /> Downloads and verification
 
-1. Open the [official GitHub Releases page](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest).
-2. Confirm the release version and asset name before downloading.
-3. Download the checksum manifest that corresponds to the same release asset, if published.
-4. Calculate the local SHA-256 and compare it with the expected hash for that exact file.
+<div align="center">
+
+[![Latest release](https://img.shields.io/badge/OPEN-LATEST_RELEASE-2563EB?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest)
+[![All releases](https://img.shields.io/badge/BROWSE-ALL_RELEASES-30384B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases)
+
+</div>
+
+1. Open the official Releases page and confirm the version and exact asset filename.
+2. Download the checksum manifest for that same release, if one is provided.
+3. Calculate the local SHA-256 and compare it to the published value for the exact asset.
 
 **Windows PowerShell**
 
 ```powershell
-Get-FileHash .\ROM_Flasher_Pro_By_Mayank_Droid.exe -Algorithm SHA256
+Get-FileHash .\ROM_Flasher_Pro_V6.exe -Algorithm SHA256
 ```
 
 **Termux / Linux**
 
 ```bash
-sha256sum ROM_Flasher_Pro_By_Mayank_Droid.exe
+sha256sum ROM_Flasher_Pro_V6.exe
 ```
 
-A matching checksum checks integrity against the supplied manifest; it does not by itself prove that a program is safe or trustworthy. Do not compare an old hash against a newly downloaded build unless the release explicitly maps them.
+A matching hash verifies file consistency against the supplied manifest; it does not independently prove that an executable is safe or trustworthy.
 
-## Before you flash
+## <img src="assets/icons/shield-check.svg" width="19" height="19" alt="" /> Pre-flash checklist
 
-- [ ] Back up important data and confirm the backup can be restored.
-- [ ] Check the exact device model, codename, region, Android version and slot state.
-- [ ] Confirm the firmware is intended for the exact device and follows trusted device-specific instructions.
-- [ ] Check release notes and published hashes before running the executable.
-- [ ] Use a reliable USB cable/port and appropriate OEM drivers.
+- [ ] Back up important data and verify that the backup is usable.
+- [ ] Confirm the exact phone model, codename, region, Android version and slot state.
+- [ ] Verify that the package is intended for the exact device variant.
+- [ ] Check the release notes, file integrity and trusted device-specific instructions.
+- [ ] Use an adequate battery level, reliable USB cable and correct drivers.
 - [ ] Understand whether a mode wipes userdata or changes bootloader lock state.
-- [ ] Do not relock the bootloader after flashing unless the installed firmware is verified as correct for the exact device/region.
-- [ ] Stop when the model, package, partition or instructions do not agree.
+- [ ] Never relock a bootloader unless firmware compatibility for that exact device and region is confirmed.
+- [ ] Stop if the model, package, partition or instruction does not match.
 
-## Troubleshooting
+## <img src="assets/icons/wrench.svg" width="19" height="19" alt="" /> Troubleshooting
 
-**The phone is not detected** — confirm cable and USB port, select the correct phone mode (ADB or Fastboot), check platform-tools and OEM driver installation, and refresh the device status.
+<details>
+<summary><strong>Device not detected</strong></summary>
 
-**Battery or slot shows Unknown** — the app may not be receiving compatible device information, or the phone may not be in a supported mode. Do not infer the battery/slot value.
+Check the USB cable and port, choose the correct ADB or Fastboot mode, confirm OEM driver and platform-tools installation, then refresh device status.
 
-**A flash operation fails** — do not blindly rerun it. Preserve the terminal output; confirm model/codename, firmware integrity, partition choice and bootloader state; then follow trusted device-specific recovery guidance.
+</details>
 
-**Windows displays a security warning** — unsigned or unfamiliar executables can trigger warnings. Do not bypass them unless you independently trust the source and have verified the artifact.
+<details>
+<summary><strong>Battery or slot appears as Unknown</strong></summary>
 
-**RAM Cleaner does not improve performance** — memory reclaim may be temporary and can cause cache rebuild work. Close unnecessary apps and investigate the actual memory pressure rather than repeatedly running cleaners.
+Compatible device information may be unavailable, or the phone may be in an unsupported mode. Do not infer a value that the application has not detected.
 
-## Project structure
+</details>
+
+<details>
+<summary><strong>Flash operation fails</strong></summary>
+
+Do not repeatedly retry blindly. Preserve the console output, verify the model/codename, firmware integrity, partition choice and bootloader state, then follow trusted device-specific recovery documentation.
+
+</details>
+
+<details>
+<summary><strong>Windows security warning</strong></summary>
+
+Unsigned or unfamiliar executables can trigger warnings. Do not bypass them unless you independently trust the publisher and have verified the artifact.
+
+</details>
+
+<details>
+<summary><strong>RAM Cleaner does not improve performance</strong></summary>
+
+Reclaiming memory can be temporary and can cause cached data to be rebuilt. Close unnecessary applications and investigate actual memory pressure instead of repeatedly running cleaners.
+
+</details>
+
+## <img src="assets/icons/globe.svg" width="19" height="19" alt="" /> Official portals
+
+<details>
+<summary><strong>Websites and services</strong></summary>
+
+| Site | Link |
+|---|---|
+| Mayank Droid Hub | [mayank-droid.pages.dev](https://mayank-droid.pages.dev/) |
+| Portfolio | [portfolio-hbo.pages.dev](https://portfolio-hbo.pages.dev/) |
+| Onyx Services | [onyx-services.pages.dev](https://onyx-services.pages.dev/) |
+| Otaku Hub Pro | [otaku-hub-pro.pages.dev](https://otaku-hub-pro.pages.dev/) |
+| Mi Unlock | [mi-unlock.pages.dev](https://mi-unlock.pages.dev/) |
+| Mi Unlock backup | [mi-unlock.xboyrex496.workers.dev](https://mi-unlock.xboyrex496.workers.dev/) |
+
+</details>
+
+<details>
+<summary><strong>GitHub projects</strong></summary>
+
+| Project | Link |
+|---|---|
+| Developer profile | [github.com/xboyrex](https://github.com/xboyrex) |
+| ROM Flasher Pro · current repository | [ROM-Flasher-Pro-by-Mayank-Droid](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid) |
+| ROM Flasher Pro | [ROM-Flasher-Pro](https://github.com/xboyrex/ROM-Flasher-Pro) |
+| ROM Flasher Onyx v5 | [ROM-Flasher-Onyx](https://github.com/xboyrex/ROM-Flasher-Onyx) |
+| Bootloader Unlocker v6 | [Mayank_Droid_Bootloader_Unlocker_v6](https://github.com/xboyrex/Mayank_Droid_Bootloader_Unlocker_v6) |
+
+</details>
+
+<details>
+<summary><strong>Telegram channels and contact</strong></summary>
+
+| Channel / Contact | Link |
+|---|---|
+| Mayank Droid | [@MayankDroid7](https://t.me/MayankDroid7) |
+| Personal / service contact | [@RoranoaxZORO](https://t.me/RoranoaxZORO) |
+| Onyx community | [@OnyxHub7](https://t.me/OnyxHub7) |
+| InstaFlux updates | [@instafluxofficial](https://t.me/instafluxofficial) |
+| ST Insta updates | [@STinsta_official](https://t.me/STinsta_official) |
+| Apps2App updates | [@Apps2App_Com](https://t.me/Apps2App_Com) |
+
+</details>
+
+<details>
+<summary><strong>YouTube and Instagram</strong></summary>
+
+| Channel | Link |
+|---|---|
+| YouTube · Mayank Droid | [youtube.com/@mayankdroid](https://youtube.com/@mayankdroid) |
+| YouTube · Onyx Droid | [youtube.com/@onyxdroid89](https://youtube.com/@onyxdroid89) |
+| Instagram · Main | [@mayank.droid](https://www.instagram.com/mayank.droid/) |
+| Instagram · Alternate | [@mayank.zx7](https://www.instagram.com/mayank.zx7/) |
+
+</details>
+
+<details>
+<summary><strong>Selected videos</strong></summary>
+
+- [Video 1](https://youtu.be/cJ6tt9qCuxM)
+- [Video 2](https://youtu.be/9Er0LKIgGlc)
+- [Video 3](https://youtu.be/ztjcEffLY3c)
+- [Video 4](https://youtu.be/5a1OmJuzU2o)
+- [Video 5](https://youtu.be/s_fo9-PVpws)
+- [YouTube Short](https://youtube.com/shorts/XU0my1GGhIQ)
+- [Instagram Reel](https://www.instagram.com/reel/DdRIgHssnFM/)
+
+</details>
+
+## <img src="assets/icons/book-open.svg" width="19" height="19" alt="" /> Repository structure
 
 ```text
 .
-├── assets/                 # Logo, brand mark, banner and SVG icon set
-├── docs/                   # Setup, verification, UI guide and screenshots
-├── scripts/                # Checksum verification helper
-├── website/                # Responsive static site, CSS, JS, assets and gallery
-├── tests/                  # Static project integrity tests
+├── assets/
+│   ├── icons/                 # Local SVG icon set
+│   ├── cyberpunk-banner.gif   # Original animated README banner
+│   ├── cyberpunk-banner.png   # Static banner fallback
+│   ├── logo.png               # Existing repository logo
+│   ├── mark.svg
+│   └── rom-flasher-banner.svg
+├── docs/
+│   └── readme-screenshots/   # Named application screenshots
+├── scripts/                  # Existing verification helpers
+├── website/                  # Static project website
 ├── CHANGELOG.md
 ├── RELEASE_NOTES.md
 ├── VERSION
 └── README.md
 ```
 
-## Website preview and deployment
+## <img src="assets/icons/link.svg" width="19" height="19" alt="" /> Project links
 
-Open `website/index.html` directly for a local preview. No package manager or build step is required. For Cloudflare Pages, set the project root/build output to the `website/` directory and leave the build command empty. See [`website/DEPLOY.md`](website/DEPLOY.md).
+[Repository](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid) · [Latest release](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest) · [Issues](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/issues) · [Website](https://mayank-droid.pages.dev/)
 
-## Safety disclaimer
+## <img src="assets/icons/alert-triangle.svg" width="19" height="19" alt="" /> Safety notice
 
-Android flashing, erasing partitions and bootloader operations can permanently erase data or leave a device unbootable. Select only packages intended for the exact device, inspect every prompt and follow trusted device-specific documentation. RAM optimization can change system responsiveness and is not guaranteed to improve performance. This repository documentation is informational and is not a warranty that any operation is safe on every system.
-
-## Links
-
-- [Latest release](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases/latest)
-- [All releases](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases)
-- [Source repository](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid)
-- [Issue tracker](https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/issues)
-- [Mayank Droid YouTube](https://youtube.com/@mayankdroid)
-- [Mayank Droid Telegram](https://t.me/MayankDroid7)
+Android flashing, partition erasure and bootloader changes can permanently erase data or leave a device unbootable. Use firmware for the exact device variant and follow trusted instructions. RAM optimization can change system responsiveness and is not guaranteed to improve performance. This README documents the visible project interface and is not a warranty that any operation is safe on every system.
 
 <div align="center">
-  <img src="assets/mark.svg" width="38" alt="ROM Flasher Pro mark"><br>
-  **ROM FLASHER PRO · MAYANK DROID**<br>
-  <sub>CYAN × VIOLET · VERIFY BEFORE YOU FLASH</sub>
+
+<img src="assets/icons/sparkles.svg" width="24" height="24" alt="" />
+
+**ROM FLASHER PRO · MAYANK DROID**
+
+<sub>CYAN × VIOLET · ANIME CYBERPUNK · VERIFY BEFORE YOU FLASH</sub>
+
 </div>
