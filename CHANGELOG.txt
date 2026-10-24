@@ -1,0 +1,60 @@
+ROM FLASHER PRO / ADB TOOLKIT
+V6.1.0 HOTFIX — CONSOLIDATED CHANGELOG
+Date: 24 October 2026
+
+SCOPE
+This record consolidates the supplied V6 build notes into one non-duplicated hotfix summary. It describes changes reported for the application build; the application source tree was not supplied in the GitHub repository, so source-level verification was not possible during this documentation refresh.
+
+1. UI RENDERING AND INTERACTION STABILITY
+• Added a state-signature guard around device-status rendering so unchanged device state does not repeatedly reconfigure the same controls and phone mock-up.
+• Stabilized tab content surfaces and repaint handling to reduce stale panels and visual bleed during navigation and window resize/restore operations.
+• Removed the continuously scrolling status ticker in favor of a static information line. Progress-ring animation is intended to run on demand while progress changes rather than as a permanent background timer.
+• Simplified the lower Fastboot action area by removing redundant Slot A, Slot B and WOF Wake controls from the reported final layout; the remaining erase and reboot controls are easier to scan.
+• Tightened console-header spacing and text wrapping to prevent overlap with utility buttons and reduce right-edge truncation.
+
+2. DEVICE DETECTION AND ADB LIFECYCLE
+• Introduced a direct ADB-server TCP request path to 127.0.0.1:5037 for device-state polling, reducing the need to launch a new adb.exe process for every state check.
+• Made manual Refresh the explicit trigger for the visible device scan and limited disruptive ADB reset behavior to a deliberate refresh path rather than a repeated background loop.
+• Improved the separation between ADB, Fastboot and Recovery/ADB-sideload states. Device-dependent controls are expected to validate that a compatible device is present before proceeding.
+• Added a compact three-stage scan indicator for refresh activity and cleaner no-device feedback in the supplied implementation notes.
+
+3. PACKAGE CLASSIFICATION AND PARTITION DISCOVERY
+• Added a payload.bin header inspection path based on the CrAU v2 metadata header, allowing partition discovery before full payload extraction.
+• Improved input routing for .zip, .tgz and .img selections. Reported routing cases include payload-based AOSP ROM ZIPs, Xiaomi HyperOS/MIUI Fastboot packages, Kernel/AnyKernel3 ZIPs and single-partition images.
+• Routed an AOSP payload ZIP selected from the HyperOS/MiFlash area back to the AOSP Custom ROM workflow instead of leaving it in the wrong mode.
+• Updated partition-selection behavior for the reported boot, init_boot, vendor_boot, dtbo and recovery images. The UI may also expose vbmeta; only select it when required by trusted device-specific instructions.
+
+4. LARGE ROM SIDeload AND EXTRACTION OUTPUT
+• Added a disk-to-ADB chunked sideload-host streaming path using 64 KiB blocks, intended to avoid loading multi-gigabyte ROM ZIPs into one large in-memory allocation.
+• Unset the problematic ADB_TRACE=0 environment value that was associated in the supplied logs with the “Unknown trace flag: 0” message.
+• The supplied notes report IMAGE_FILE_LARGE_ADDRESS_AWARE enabled in bundled adb/fastboot PE headers. This is recorded as a build-note claim, not an independently verified binary modification.
+• Reduced payload-dumper console noise and replaced long extraction output with concise progress messages that identify the package, extraction stage and detected image set.
+• Added a single-line live status area below the Auto Flash action for a clearer view of the active step.
+
+5. TERMINAL LOGGING AND CONSOLE PRESENTATION
+• Locked the terminal display to read-only mode and added newline separation to prevent adjacent log entries from running together.
+• Reworked the terminal header into a compact command-console layout with dedicated driver verification, ADB reset and clear actions.
+• Changed console text wrapping and reported font sizing to improve visibility of long MiFlash and driver-verification output.
+• Removed a duplicated RAM-BOOST prefix from log messages.
+
+6. DRIVER INSTALLATION AND TOOL VERIFICATION
+• Added a driver-installation panel for the driver groups listed in the supplied build notes: Google/Xiaomi WinUSB, Qualcomm QDLoader 9008, Microsoft RNDIS, Microsoft MTP and NVIDIA USB.
+• Added individual driver-install controls plus combined install/verification actions, according to the supplied implementation report.
+• Added a console verification report covering adb_usb.ini, the five listed driver groups and ten bundled tool entries: adb.exe, fastboot.exe, mi_fastboot.exe, payload-dumper-go.exe, fh_loader.exe, QSaharaServer.exe, lsusb.exe, make_f2fs.exe, XiaoMiFlash.exe and SP_download_tool.exe.
+• Verification output is informational; it does not by itself prove that a driver is compatible with a particular phone or that every flashing operation will succeed.
+
+7. RAM CLEANER / MEMORY CONTROLS
+• Expanded the reported memory-optimization workflow to ten areas.
+• Added CRT heap/GC compaction via _heapmin and temporary/USB-pipe-buffer cleanup to the reported stages.
+• Reframed background work to reduce unnecessary always-on animation and status updates. Memory cleanup results remain system-dependent and should not be described as a guaranteed performance increase.
+
+8. STARTUP, STRING WARNINGS AND BUILD HYGIENE
+• Corrected the reported missing Tuple import in core/driver_manager.py and restored the _apply_all_windows_turbo_tweaks initialization path in core/turbo_engine.py to address the documented startup failure.
+• Corrected invalid backslash escape sequences in driver/flash-related docstrings and the fh_loader COM-port argument formatting.
+• The supplied notes report a Python compile check across eight Python modules with warnings treated as errors and a ROMFlasherProApp() initialization smoke test. The source was not present here, so these reported test results could not be reproduced during this repository refresh.
+• Build notes report removal of duplicate launcher files and unused icons. Confirm the actual release package layout before publishing so only intended launchers and dependencies are included.
+
+KNOWN RELEASE CHECKS
+• Confirm the executable filename, internal version, VERSION file, Git tag and Release title all agree before publishing V6.1.0.
+• Publish a checksum for the exact executable attached to the V6.1.0 release; do not reuse a checksum for a different file.
+• The current GitHub repository contains documentation, screenshots, a static website and release metadata rather than the original application source tree. These notes therefore do not constitute a source audit or a guarantee that every listed behavior is present in the uploaded executable.

@@ -1,0 +1,101 @@
+ROM FLASHER PRO / ADB TOOLKIT V6.1.0
+OPERATIONAL INSTRUCTIONS
+
+READ BEFORE USE
+This guide covers the Android workflows shown in ROM Flasher Pro: AOSP/Custom ROM, Xiaomi HyperOS/MIUI MiFlash, Kernel & Recovery, ADB/Fastboot console and bundled driver verification. The requested “HyperOS MiFlash” section is Xiaomi Android firmware guidance; it is not an AMI motherboard BIOS/UEFI flashing procedure.
+
+Flashing, formatting, erasing partitions and changing bootloader state can destroy data or leave a device unbootable. The exact workflow varies by device, ROM package and Android release. Do not continue when the package maintainer's instructions disagree with a step below.
+
+1. PRE-FLIGHT CHECKLIST
+1. Confirm the phone's exact model, codename, region and current firmware build.
+2. Obtain the ROM from a trusted device maintainer. Verify the download and checksum when the publisher provides one.
+3. Back up user data and any device-specific data you cannot recreate.
+4. Charge the phone sufficiently and use a reliable USB cable/port. Avoid hubs where possible.
+5. Install the appropriate OEM USB/ADB driver. Use elevated driver installation only when required and only for a trusted package.
+6. Launch the intended release executable. In Android, enable Developer options and USB debugging only when the selected workflow needs ADB; accept the phone's authorization prompt.
+7. Use the application's Refresh/device-status control and verify that the displayed mode matches the phone. Do not treat a progress indicator as proof that a command succeeded.
+
+2. AOSP / CUSTOM ROM — AUTO-FLASH AND ADB SIDELOAD
+Use this procedure only when the ROM's official install guide and the selected app workflow call for it.
+
+A. Select and inspect the package
+1. Open the AOSP / Custom ROM workflow.
+2. Click Browse and select the ROM ZIP. If the package is a supported payload-based ROM, the tool may inspect payload.bin metadata and populate the available partition checklist.
+3. Confirm that the archive belongs to the exact device codename. Review each selected target (for example boot, init_boot, vendor_boot, dtbo, recovery and, only if required, vbmeta). Do not flash every checkbox blindly.
+4. If the selected file or detected workflow appears inconsistent, stop and select the correct workflow manually.
+
+B. Enter Fastboot and start the operation
+5. Choose Reboot to Bootloader, or manually boot the phone into the Fastboot mode required by the ROM instructions.
+6. Wait for the application to detect the device. If it is not detected, stop and troubleshoot the cable, driver and device mode before flashing.
+7. Click Start Auto Flash only after reviewing the package, targets and warnings. Keep the cable connected and do not close the application while a command or transfer is active.
+8. Review the terminal output and wait for the tool to report completion. A completed progress animation alone is not sufficient; check for command errors.
+
+C. Recovery / ADB sideload stage
+9. If the ROM workflow reboots to Recovery, follow the ROM maintainer's exact instructions. Format Data only when a clean install explicitly requires it and after confirming that the data is backed up; formatting is destructive and is not a universal step for every update.
+10. If instructed, open Apply Update → ADB Sideload in Recovery. Wait for the phone to enter sideload mode and for the tool to start the transfer.
+11. Keep the connection stable until sideload and verification finish. Do not unplug, reboot, erase partitions or force-close the app during an active transfer.
+12. When Recovery reports successful installation, select Reboot System if the maintainer's instructions call for it. The first boot may take several minutes; the duration varies by device and ROM. If boot loops or errors occur, record the logs and consult the ROM maintainer rather than repeating random flashes.
+
+3. XIAOMI HYPEROS / MIUI — MIFLASH WORKFLOW
+Use only a Fastboot ROM intended for the exact Xiaomi/Redmi/POCO model and region, or the correct Recovery ZIP when that is the intended path. Fastboot archives and Recovery ZIPs are not interchangeable.
+
+A. Choose the correct package and mode
+1. Open HyperOS / MIUI MiFlash.
+2. Select the Fastboot ROM archive/folder (commonly a vendor-provided .tgz package or its extracted folder) or Recovery ZIP as appropriate for the chosen mode.
+3. Check the model/codename, region, build version and Anti-Rollback (ARB) requirements. Do not downgrade across an unsupported rollback boundary.
+4. Run the visible driver/tool verification when needed. Resolve missing drivers or tools before starting a flash.
+5. Review the chosen script mode carefully:
+   • Clean All — destructive; removes user data.
+   • Save User Data — intended to preserve user data, but preservation is not guaranteed.
+   • Clean All & Lock Bootloader — high risk. Do not use unless the exact firmware, model and region are verified as compatible with relocking and trusted device-specific instructions explicitly require it.
+   • EDL / 9008 — use only through a supported, authorized, device-appropriate service process. Do not improvise an EDL flash.
+
+B. Flash and verify
+6. Confirm the device is in the required Fastboot/EDL mode and is positively identified before starting.
+7. Re-check the selected mode and all data-loss/bootloader warnings. Do not enable a destructive or relocking option just because it is offered in the interface.
+8. Start the operation and keep the USB connection stable. Do not disconnect power/cable or interrupt an active write.
+9. When the tool completes, inspect the terminal for explicit errors and confirm the phone's resulting state. If the operation fails, save the logs and stop; do not repeatedly retry with different scripts without understanding the cause.
+
+4. KERNEL & RECOVERY IMAGE FLASHING
+1. Confirm the image is built for the exact device codename and compatible firmware/Android base.
+2. Select the image file and explicitly choose the partition specified by the image maintainer. boot, init_boot, vendor_boot, recovery, dtbo and vbmeta have different roles and are not interchangeable.
+3. Verify the selected device mode and target partition before clicking the flash action.
+4. Do not flash an image because its filename looks plausible. Never lock the bootloader after flashing mismatched or unverified firmware.
+5. Review the result and reboot only when the operation and device-specific instructions permit it.
+
+5. ADB / FASTBOOT CONSOLE AND DEVICE DETECTION
+• ADB normally requires Android to be booted with USB debugging enabled and the computer authorized. Fastboot detection requires the phone to be in the appropriate bootloader/fastboot mode.
+• If the device is missing, check the cable/USB port, Windows driver, phone prompt and current mode. Use Refresh once and review the resulting status/output.
+• Do not run repeated ADB resets while a sideload or flash is active.
+• Console logs are diagnostic evidence, not a guarantee of successful writes. Confirm device state with the appropriate independent tool when needed.
+
+6. DRIVER INSTALLATION AND VERIFICATION
+1. Open the driver panel and identify the required driver group for the current USB mode.
+2. Install only trusted, compatible drivers. If Windows reports a signature, publisher or compatibility problem, stop and validate the package source rather than disabling security controls indiscriminately.
+3. Use Verify in CMD / Verify Tools to inspect the bundled-tool and driver checks reported by the application.
+4. Resolve missing tools or driver errors before flashing. A “verified” list does not prove compatibility with every device or firmware.
+
+7. RAM CLEANER / MEMORY OPTIMIZATION
+1. Save open documents and close critical work before starting memory optimization.
+2. Review the selected memory areas and requested action.
+3. Start the operation only if you understand its effect. Memory cleanup can cause applications to rebuild caches and may provide no lasting performance improvement.
+4. Do not use a RAM-cleaning operation as a substitute for diagnosing high memory use, a driver issue or a failing application.
+
+8. TROUBLESHOOTING AND STOP CONDITIONS
+Stop immediately if any of the following occurs:
+• The displayed model, codename, region or mode does not match the phone/package.
+• The detected partition list conflicts with the ROM maintainer's instructions.
+• A driver/tool verification fails or the terminal reports a non-zero command result.
+• The phone disconnects during an active write or sideload.
+• A script proposes erasing data or locking the bootloader unexpectedly.
+• You do not understand the requested partition, command or warning.
+
+Capture the complete console log, ROM filename, device codename, current mode and exact error message. Seek guidance from the ROM/device maintainer before resuming.
+
+9. VERSION AND PACKAGE VERIFICATION
+Before distributing or using a release, confirm the asset filename and version in the GitHub Release. Verify SHA-256 against the digest published for that exact file. A matching digest proves byte-for-byte consistency with that digest; it does not independently prove that the executable is safe or that it behaves as intended.
+
+Official project pages:
+Repository: https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid
+Releases: https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/releases
+Issues: https://github.com/xboyrex/ROM-Flasher-Pro-by-Mayank-Droid/issues

@@ -1,19 +1,25 @@
 # Artifact verification
 
-A checksum is useful only when compared with the expected digest published for the **same exact release artifact**.
+A checksum is meaningful only when it is compared with the digest published for the **same exact artifact**.
 
 ## Windows PowerShell
 
 ```powershell
-Get-FileHash .\ROM_Flasher_Pro_By_Mayank_Droid.exe -Algorithm SHA256
+Get-FileHash .\ADB_Toolkit_V6.exe -Algorithm SHA256
 ```
 
 ## Termux / Linux
 
 ```bash
-sha256sum ROM_Flasher_Pro_By_Mayank_Droid.exe
+sha256sum ADB_Toolkit_V6.exe
 ```
 
-The tracked checksum file in this repository names `ROM_Flasher_Pro_By_Mayank_Droid.exe`. Check the current release's asset name and checksum manifest before relying on it. If the executable version changes, the digest must change with it.
+The currently observed GitHub asset `ADB_Toolkit_V6.exe` has the SHA-256 digest below in the existing `v6.0.0` release metadata:
 
-A matching hash confirms the file matches a supplied digest; it does not independently establish software safety, authorship or malware-free status.
+```text
+f122777f1c99be529b4293defedafe34153744f698c11a87aa2937ea6c28437d  ADB_Toolkit_V6.exe
+```
+
+Use this value only for the exact binary whose release metadata publishes that digest. If the executable changes, recalculate the hash. When a new V6.1.0 release is created, verify the digest against the file uploaded to that release.
+
+A matching digest confirms byte-for-byte equality with the expected file; it does not independently establish software safety, authorship or malware-free status.

@@ -1,36 +1,40 @@
-# Feature guide — interface-grounded
+# Feature guide — V6.1 interface and supplied build notes
 
-This guide describes the controls visible in the supplied screenshots. It does not certify the underlying executable's implementation or success behavior.
+This guide describes the visible interface plus the behaviors reported in the supplied build notes. A screenshot can establish what a control looks like, but does not certify the implementation or successful results on every device.
 
 ## AOSP / Custom ROM
 
-Visible controls include a firmware ZIP/IMG selector, a Fastboot partition checklist (`boot`, `init_boot`, `vendor_boot`, `dtbo`, `recovery`, `vbmeta`), an Auto Flash entry point and Fastboot/reboot commands. Select partitions only when trusted instructions for the exact device require them.
+The workspace shows firmware ZIP/IMG selection, a Fastboot partition checklist, Auto Flash entry point and reboot/erase controls. Supplied notes describe payload.bin header inspection and automatic detection of supported boot-related partitions. Confirm the exact codename and use only the partitions prescribed by the ROM maintainer.
 
-## Xiaomi HyperOS / MIUI
+## Xiaomi HyperOS / MIUI MiFlash
 
-Visible controls include a Fastboot ROM archive/folder selector or Recovery ZIP selector, ARB Guard and script modes:
-- **Clean All** — labelled as wiping userdata and storage.
-- **Save User Data** — intended to preserve user data, but it cannot guarantee preservation.
-- **Clean All & Lock Bootloader** — potentially unsafe if the installed firmware does not match the exact device and region. Do not relock based on guesswork.
+The workspace shows a Fastboot ROM archive/folder or Recovery ZIP selector, script modes, ARB Guard and driver/tool verification. The supplied notes report routing logic for supported `.tgz` Fastboot packages and AOSP payload ZIPs accidentally selected from this area.
 
-Check anti-rollback requirements and vendor/device-specific instructions.
+- **Clean All:** destructive; expects user data to be erased.
+- **Save User Data:** intended to preserve user data but cannot guarantee preservation.
+- **Clean All & Lock Bootloader:** high risk. Do not use unless exact model/region firmware and trusted maintainer instructions explicitly permit relocking.
+- **EDL / 9008:** only for an authorized, device-appropriate service process.
 
 ## Kernel & Recovery
 
-The dialog shows ZIP/IMG selection and target partitions including `boot`, `recovery`, `init_boot`, `vendor_boot` and `dtbo`. Never choose a target from the filename alone.
+The dialog shows ZIP/IMG selection and target partitions such as `boot`, `recovery`, `init_boot`, `vendor_boot` and `dtbo`. These partitions are not interchangeable. Select a target from trusted device-specific instructions, not from the filename alone.
 
 ## Terminal and device status
 
-The screenshots show app-reported log output, a Clear control, a Refresh control, battery/slot fields and a workflow progress ring. Unknown fields are not proof of valid state. Console output and progress UI should not replace independent verification.
+The interface shows console output, a Clear action, Refresh, status indicators and workflow progress. Supplied notes report cleaner read-only log rendering, newline protection, improved text wrapping and a direct ADB-server TCP polling path. Console output and the progress UI should not replace independent verification of a destructive command.
 
-## RAM Cleaner / Windows Memory Cleaner
+## Driver installation and verification
 
-The Windows dialog screenshot shows used/free physical RAM, a progress bar, selected memory areas and an Optimize Memory Now control. Visible areas include Combined Page List, Modified File Cache, Modified Page List, Registry Cache, Standby List, Low Priority Standby List, System File Cache and Working Set. The exact native API calls and outcomes are not verified by the screenshots. Save work first; benefits depend on system state and may be temporary.
+The new screenshots show a driver panel with individual install controls and an aggregate install/verification action. Supplied notes list Google/Xiaomi WinUSB, Qualcomm QDLoader 9008, Microsoft RNDIS, Microsoft MTP and NVIDIA USB driver groups, plus a console report for the bundled tools. Install only trusted drivers compatible with the connected device and Windows build.
 
-## Official Links
+## RAM Cleaner / Windows memory optimization
 
-A dialog screenshot shows shortcuts for Mayank Droid Hub, Xiaomi / POCO Mi Unlock, Onyx Services, Otaku Hub Pro and Telegram destinations. Verify destinations before signing in or downloading files.
+The existing repository screenshot shows memory usage, selected memory areas and an optimize action. The supplied build notes report ten stages, including CRT heap/GC compaction and temporary/USB-buffer cleanup. The exact native calls and outcomes are not verified by screenshots; effects vary by system, and memory cleanup is not guaranteed to improve responsiveness.
+
+## Official links
+
+A screenshot shows project/community shortcuts. Verify a destination before signing in, downloading files or entering credentials.
 
 ## Operational safety
 
-Flashing, partition erasing, data wiping and bootloader changes may result in data loss or an unbootable device. Back up data and follow trusted instructions for the exact device and firmware package.
+Flashing, partition erasure, data formatting and bootloader changes can cause irreversible data loss or leave a device unbootable. Back up data, verify the firmware/package and follow trusted instructions for the exact device. Never lock the bootloader with incompatible firmware.
