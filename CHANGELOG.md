@@ -1,11 +1,14 @@
 # Changelog
 
-## V6.1.0 — CYBERPUNK EDITION documentation and screenshot refresh
+## V6.1.0 — repository, screenshot and publishing refresh
 
-This package replaces the prior screenshot set with exactly the eight images supplied by the user (`Screenshot (66).png` through `Screenshot (73).png`). The images are mirrored into the README gallery, the semantic screenshot directory, the numeric `main/` and root paths, and `website/screenshots/`.
+- Replaced seven unique screenshots in the repository and static website with the supplied update images.
+- Excluded the duplicate upload `Screenshot (72).png` from the gallery because its SHA-256 matches `Screenshot (70).png`.
+- Retained the prior RAM Cleaner screenshot because no replacement was supplied.
+- Updated README gallery descriptions, safety checklist, release notes and artifact-verification guidance.
+- Added a Termux-friendly Git publishing helper with confirmation before staging/committing/pushing.
+- Preserved the existing branding, HTML/CSS/JS site structure and local SVG/PNG assets.
 
-The supplied `CHANGELOG.txt` records reported fixes for UI redraw/tearing, ADB/Fastboot detection, console rendering, payload-based package routing, large ROM sideloading, driver/tool verification, and RAM Cleaner workflows. These are reports from the supplied notes, not independently verified claims about a binary.
+### Scope note
 
-The supplied `INSTRUCTIONS.txt` is preserved as the flashing-process guide.
-
-> **Scope:** this is a documentation/screenshot update bundle. The application source tree and a newly built executable were not provided, so this ZIP does not claim to patch or validate the application executable. Do not attach a legacy V6.0.0 binary to a V6.1.0 release under a changed filename.
+The supplied `CHANGELOG.txt` contains reported application changes, including UI stability, ADB/Fastboot detection, package routing, large sideload handling, driver verification and RAM Cleaner behavior. Those reports have not been independently verified here. The uploaded repository does not contain the original application source tree or a newly built executable, so this refresh does not claim to implement or validate those application-level changes.

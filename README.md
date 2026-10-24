@@ -22,7 +22,7 @@
 
 ROM Flasher Pro is a Windows-facing Android servicing toolkit interface covering AOSP/custom-ROM workflows, Xiaomi HyperOS/MIUI MiFlash modes, kernel/recovery image selection, ADB/Fastboot diagnostics, driver installation/verification and Windows memory-optimization controls.
 
-This repository currently contains the documentation, screenshots, visual assets, static website and release metadata. It **does not contain the original application source tree**. The hotfix notes below are consolidated from the supplied build/change log; they are not a substitute for an independent source audit or device-specific validation of the executable.
+This repository does **not** currently contain the original application source tree. This package contains documentation, screenshots, visual assets, the static website, release metadata, tests and publishing helpers; it does not include a newly built V6.1.0 executable. The hotfix notes below are consolidated from the supplied build/change log; they are not a substitute for an independent source audit or device-specific validation of the executable.
 
 ## V6.1.0 hotfix highlights
 
@@ -38,7 +38,7 @@ See [CHANGELOG.txt](CHANGELOG.txt) for the detailed hotfix record and [INSTRUCTI
 
 ## Interface gallery
 
-The gallery below contains **only the eight screenshots supplied for this update**. The same eight source images are mirrored into the numbered root, `main/`, and `website/screenshots/` paths by the apply script. These images show the interface; they do not independently verify runtime behavior.
+The gallery uses seven unique screenshots from the supplied update archive. `Screenshot (72).png` is excluded because it is byte-identical to `Screenshot (70).png`. The existing RAM Cleaner screenshot is retained because no replacement for that screen was supplied. Screenshots show the interface; they do not independently verify runtime behavior. See the [full screenshot contact sheet](screenshots/v6.1/contact-sheet.png) for a compact review of all seven updated screens.
 
 <table>
 <tr>
@@ -54,8 +54,8 @@ The gallery below contains **only the eight screenshots supplied for this update
 <td width="50%" valign="top"><a href="docs/readme-screenshots/tool-verification-console.png"><img src="docs/readme-screenshots/tool-verification-console.png" alt="Terminal tool-verification output" width="100%" /></a><br /><strong>06 / Tool Verification Console</strong><br /><sub>Screenshot (71).png</sub></td>
 </tr>
 <tr>
-<td width="50%" valign="top"><a href="docs/readme-screenshots/duplicate-driver-installation.png"><img src="docs/readme-screenshots/duplicate-driver-installation.png" alt="Screenshot (72), a byte-identical duplicate of Screenshot (70)" width="100%" /></a><br /><strong>07 / Duplicate Upload (Matches 05)</strong><br /><sub>Screenshot (72).png — identical bytes to Screenshot (70).png</sub></td>
-<td width="50%" valign="top"><a href="docs/readme-screenshots/official-links.png"><img src="docs/readme-screenshots/official-links.png" alt="Mayank Droid official links panel" width="100%" /></a><br /><strong>08 / Official Links</strong><br /><sub>Screenshot (73).png</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/official-links.png"><img src="docs/readme-screenshots/official-links.png" alt="Mayank Droid official links panel" width="100%" /></a><br /><strong>07 / Official Links</strong><br /><sub>Screenshot (73).png</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/ram-cleaner.png"><img src="docs/readme-screenshots/ram-cleaner.png" alt="Previously supplied RAM Cleaner interface" width="100%" /></a><br /><strong>08 / RAM Cleaner — retained</strong><br /><sub>Existing screenshot; no replacement supplied in this update.</sub></td>
 </tr>
 </table>
 
@@ -87,8 +87,9 @@ The gallery below contains **only the eight screenshots supplied for this update
 - [V6.1 instructions (TXT)](INSTRUCTIONS.txt)
 - [Application feature guide](docs/FEATURES.md)
 - [Artifact verification](docs/VERIFICATION.md)
+- [Publish from Termux](docs/PUBLISH_FROM_TERMUX.md)
 
-## Safety and scope
+## Before you flash\n\n- Back up all important data and confirm the exact device model/codename.\n- Verify firmware provenance, package integrity and the intended partition list.\n- Treat `Format Data`, `Erase Userdata`, `Clean All` and bootloader relocking as potentially destructive.\n- Do not proceed if device detection, selected workflow or on-screen status conflicts with trusted device-specific instructions.\n\n## Safety and scope
 
 Flashing, partition erasure, data formatting and bootloader changes can cause irreversible data loss or leave a device unbootable. Back up important data, use firmware intended for the exact device variant and understand each command before authorizing it. Do not select `Clean All & Lock` unless trusted, device-specific release instructions explicitly permit relocking with that exact firmware. Do not use EDL/9008 flows outside an authorized and device-appropriate process.
 
