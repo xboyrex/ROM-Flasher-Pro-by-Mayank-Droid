@@ -1,25 +1,11 @@
 # Changelog
 
-## V6.1.0 — Hotfix documentation and screenshot refresh
+## V6.1.0 — CYBERPUNK EDITION documentation and screenshot refresh
 
-The V6.1.0 hotfix record consolidates the supplied build notes without repeating the same issue under multiple headings. Reported areas include UI redraw stability, ADB/Fastboot state handling, package auto-routing, large-ROM sideload streaming, console readability, driver/tool verification and RAM Cleaner stages.
+This package replaces the prior screenshot set with exactly the eight images supplied by the user (`Screenshot (66).png` through `Screenshot (73).png`). The images are mirrored into the README gallery, the semantic screenshot directory, the numeric `main/` and root paths, and `website/screenshots/`.
 
-- **UI:** state-signature redraw guard, steadier tab repainting, static status text, on-demand progress animation and a simplified Fastboot action area.
-- **Device state:** direct ADB-server TCP polling, explicit refresh-driven scan/reset behavior and improved Recovery/ADB-sideload/Fastboot state separation.
-- **Package detection:** metadata-first payload partition discovery and automatic routing for supported ZIP/TGZ/IMG inputs, including AOSP payload ZIPs selected from the HyperOS workflow.
-- **Large sideload:** reported 64 KiB chunked transfer path, ADB_TRACE cleanup and quieter payload extraction output.
-- **Console:** read-only output, consistent newline handling, improved wrapping and removal of the repeated RAM-BOOST prefix.
-- **Drivers/tools:** driver installation panel and console verification for the listed driver groups and bundled utilities.
-- **RAM Cleaner:** ten reported stages, including heap/GC and temporary/USB-buffer cleanup.
-- **Build notes:** reported syntax-warning fixes and startup initialization checks.
+The supplied `CHANGELOG.txt` records reported fixes for UI redraw/tearing, ADB/Fastboot detection, console rendering, payload-based package routing, large ROM sideloading, driver/tool verification, and RAM Cleaner workflows. These are reports from the supplied notes, not independently verified claims about a binary.
 
-Detailed technical list: [`CHANGELOG.txt`](CHANGELOG.txt). Workflow-specific guidance: [`INSTRUCTIONS.txt`](INSTRUCTIONS.txt).
+The supplied `INSTRUCTIONS.txt` is preserved as the flashing-process guide.
 
-> Evidence boundary: the original application source tree is not present in this repository. Application changes above are taken from the supplied build notes and could not be independently verified from source during this repository update. The V6.1.0 GitHub Release must be published separately from this documentation commit.
-
-## V6.0.0 — documentation and website refresh
-
-- Reworked the repository README into a screenshot-led project guide.
-- Updated the static website with responsive layout, local vector icons, workspace explorer, screenshot filtering and image lightbox.
-- Added a feature guide, installation guidance, release-artifact policy and verification instructions.
-- Added UI design notes, static integrity checks and website deployment documentation.
+> **Scope:** this is a documentation/screenshot update bundle. The application source tree and a newly built executable were not provided, so this ZIP does not claim to patch or validate the application executable. Do not attach a legacy V6.0.0 binary to a V6.1.0 release under a changed filename.

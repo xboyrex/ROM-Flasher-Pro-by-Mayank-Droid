@@ -1,27 +1,15 @@
-ROM FLASHER PRO V6.1.0 — SCREENSHOT SET
+ROM Flasher Pro V6.1.0 screenshot set
 
-Captured screenshots supplied for the V6.1 documentation refresh. All images are 1366×768 PNGs.
-The uploaded Screenshot (72).png was byte-identical to Screenshot (70).png and is intentionally omitted to avoid a duplicate.
-Screenshots document visible interface controls; they do not independently verify application behavior.
+Exactly eight screenshots supplied by the user are included in this set:
+01-aosp-custom-rom.png (Screenshot (66).png)
+02-hyperos-miui-miflash.png (Screenshot (67).png)
+03-kernel-recovery.png (Screenshot (68).png)
+04-terminal-console-idle.png (Screenshot (69).png)
+05-driver-installation.png (Screenshot (70).png)
+06-tool-verification-console.png (Screenshot (71).png)
+07-duplicate-driver-installation.png (Screenshot (72).png; byte-identical to Screenshot (70).png)
+08-official-links.png (Screenshot (73).png)
 
-01-aosp-custom-rom.png
-  Source: Screenshot (66).png
-  Purpose: AOSP / Custom ROM workspace with firmware selection and partition checklist.
-02-hyperos-miui-miflash.png
-  Source: Screenshot (67).png
-  Purpose: Xiaomi HyperOS / MIUI MiFlash workflow and script mode controls.
-03-kernel-recovery.png
-  Source: Screenshot (68).png
-  Purpose: Kernel and Recovery workflow with image and target-partition controls.
-04-terminal-console-idle.png
-  Source: Screenshot (69).png
-  Purpose: Terminal console workspace before command output is populated.
-05-driver-installation.png
-  Source: Screenshot (70).png
-  Purpose: Driver installation panel with individual and aggregate controls.
-06-tool-verification-console.png
-  Source: Screenshot (71).png
-  Purpose: Terminal output showing bundled driver/tool verification.
-07-official-links.png
-  Source: Screenshot (73).png
-  Purpose: Mayank Droid ecosystem and service links dialog.
+The bytes are the original PNG data from the uploaded Screenshots.zip; only filenames changed. No other screenshot source is included.
+
+Note: Screenshot (70).png and Screenshot (72).png are byte-for-byte identical in the uploaded ZIP. Both uploaded filenames are represented; screenshot 07 is explicitly marked as the duplicate.

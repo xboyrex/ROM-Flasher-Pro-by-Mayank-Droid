@@ -1,12 +1,8 @@
 <div align="center">
 
-<img src="assets/logo.png" width="82" alt="ROM Flasher Pro logo" />
-
-<img src="assets/cyberpunk-banner.gif" width="100%" alt="ROM Flasher Pro cyberpunk banner" />
-
 # ROM FLASHER PRO
 
-**V6.1.0 · HOTFIX EDITION · MAYANK DROID**
+**V6.1.0 · CYBERPUNK EDITION · MAYANK DROID**
 
 <img src="https://img.shields.io/badge/RELEASE-V6.1.0-8B5CF6?style=for-the-badge&logo=github&logoColor=white" alt="Version 6.1.0" />
 <img src="https://img.shields.io/badge/PLATFORM-WINDOWS-2563EB?style=for-the-badge&logo=windows&logoColor=white" alt="Windows platform" />
@@ -42,24 +38,24 @@ See [CHANGELOG.txt](CHANGELOG.txt) for the detailed hotfix record and [INSTRUCTI
 
 ## Interface gallery
 
-Screenshots document the available interface and its visible controls; they do not independently verify that every operation succeeds on every device or Windows build.
+The gallery below contains **only the eight screenshots supplied for this update**. The same eight source images are mirrored into the numbered root, `main/`, and `website/screenshots/` paths by the apply script. These images show the interface; they do not independently verify runtime behavior.
 
 <table>
 <tr>
-<td width="50%" valign="top"><a href="docs/readme-screenshots/aosp-custom-rom.png"><img src="docs/readme-screenshots/aosp-custom-rom.png" alt="AOSP and custom ROM workspace" width="100%" /></a><br /><strong>01 / AOSP &amp; Custom ROM</strong><br /><sub>Firmware selection, payload-aware partition checklist and Auto Flash entry point.</sub></td>
-<td width="50%" valign="top"><a href="docs/readme-screenshots/hyperos-miui.png"><img src="docs/readme-screenshots/hyperos-miui.png" alt="HyperOS and MIUI MiFlash workspace" width="100%" /></a><br /><strong>02 / HyperOS &amp; MIUI</strong><br /><sub>Fastboot ROM/Recovery ZIP selection, script modes and ARB Guard.</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/aosp-custom-rom.png"><img src="docs/readme-screenshots/aosp-custom-rom.png" alt="AOSP and custom-ROM workspace" width="100%" /></a><br /><strong>01 / AOSP &amp; Custom ROM</strong><br /><sub>Screenshot (66).png</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/hyperos-miui-miflash.png"><img src="docs/readme-screenshots/hyperos-miui-miflash.png" alt="HyperOS and MIUI MiFlash workspace" width="100%" /></a><br /><strong>02 / HyperOS &amp; MIUI MiFlash</strong><br /><sub>Screenshot (67).png</sub></td>
 </tr>
 <tr>
-<td width="50%" valign="top"><a href="docs/readme-screenshots/kernel-recovery.png"><img src="docs/readme-screenshots/kernel-recovery.png" alt="Kernel and recovery workspace" width="100%" /></a><br /><strong>03 / Kernel &amp; Recovery</strong><br /><sub>Image input and target-partition selection.</sub></td>
-<td width="50%" valign="top"><a href="docs/readme-screenshots/terminal-console.png"><img src="docs/readme-screenshots/terminal-console.png" alt="Terminal console showing tool and driver verification output" width="100%" /></a><br /><strong>04 / Terminal &amp; Verification</strong><br /><sub>Command-style output and bundled-tool verification results.</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/kernel-recovery.png"><img src="docs/readme-screenshots/kernel-recovery.png" alt="Kernel and recovery workspace" width="100%" /></a><br /><strong>03 / Kernel &amp; Recovery</strong><br /><sub>Screenshot (68).png</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/terminal-console-idle.png"><img src="docs/readme-screenshots/terminal-console-idle.png" alt="Idle terminal console workspace" width="100%" /></a><br /><strong>04 / Terminal Console — Idle</strong><br /><sub>Screenshot (69).png</sub></td>
 </tr>
 <tr>
-<td width="50%" valign="top"><a href="docs/readme-screenshots/driver-installation.png"><img src="docs/readme-screenshots/driver-installation.png" alt="Driver installation and verification panel" width="100%" /></a><br /><strong>05 / Driver Installation</strong><br /><sub>Driver groups with individual and combined installation controls.</sub></td>
-<td width="50%" valign="top"><a href="docs/readme-screenshots/terminal-console-idle.png"><img src="docs/readme-screenshots/terminal-console-idle.png" alt="Idle terminal console workspace" width="100%" /></a><br /><strong>06 / Console Workspace</strong><br /><sub>Terminal layout before command output is populated.</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/driver-installation.png"><img src="docs/readme-screenshots/driver-installation.png" alt="MiFlash driver installation panel" width="100%" /></a><br /><strong>05 / MiFlash Driver Installer</strong><br /><sub>Screenshot (70).png</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/tool-verification-console.png"><img src="docs/readme-screenshots/tool-verification-console.png" alt="Terminal tool-verification output" width="100%" /></a><br /><strong>06 / Tool Verification Console</strong><br /><sub>Screenshot (71).png</sub></td>
 </tr>
 <tr>
-<td width="50%" valign="top"><a href="docs/readme-screenshots/official-links.png"><img src="docs/readme-screenshots/official-links.png" alt="Mayank Droid ecosystem and service links dialog" width="100%" /></a><br /><strong>07 / Official Links</strong><br /><sub>Project and community shortcut panel.</sub></td>
-<td width="50%" valign="top"></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/duplicate-driver-installation.png"><img src="docs/readme-screenshots/duplicate-driver-installation.png" alt="Screenshot (72), a byte-identical duplicate of Screenshot (70)" width="100%" /></a><br /><strong>07 / Duplicate Upload (Matches 05)</strong><br /><sub>Screenshot (72).png — identical bytes to Screenshot (70).png</sub></td>
+<td width="50%" valign="top"><a href="docs/readme-screenshots/official-links.png"><img src="docs/readme-screenshots/official-links.png" alt="Mayank Droid official links panel" width="100%" /></a><br /><strong>08 / Official Links</strong><br /><sub>Screenshot (73).png</sub></td>
 </tr>
 </table>
 
