@@ -40,28 +40,28 @@
       description: 'The screenshot shows ROM archive/folder or Recovery ZIP selection, three MiFlash script modes and an ARB Guard toggle.',
       controls: ['Fastboot ROM archive / folder or Recovery ZIP', 'Clean All — labelled as wiping userdata and storage', 'Save User Data — preservation is not guaranteed', 'Clean All & Lock Bootloader — dangerous with incompatible firmware'],
       warning: 'Do not relock the bootloader unless firmware and region compatibility are verified for the exact model.',
-      image: './screenshots/4.png', alt: 'Xiaomi HyperOS and MIUI MiFlash workspace', tab: 'tab-hyperos'
+      image: './screenshots/2.png', alt: 'Xiaomi HyperOS and MIUI MiFlash workspace', tab: 'tab-hyperos'
     },
     kernel: {
       number: 'WORKSPACE 03', title: 'Kernel & Recovery',
       description: 'Choose a ZIP or IMG file and verify the intended target partition from trusted device-specific instructions.',
       controls: ['ZIP / IMG file selector', 'boot / recovery / init_boot', 'vendor_boot / dtbo partition options', 'Auto Flash and Fastboot command area'],
       warning: 'Never guess a partition based on a filename alone. Use instructions for the exact device.',
-      image: './screenshots/5.png', alt: 'Kernel and recovery workspace', tab: 'tab-kernel'
+      image: './screenshots/3.png', alt: 'Kernel and recovery workspace', tab: 'tab-kernel'
     },
     console: {
       number: 'WORKSPACE 04', title: 'Terminal Console',
       description: 'Use this screen to review application-reported output and contextual device status; independently verify whether an operation succeeded.',
       controls: ['ADB / Fastboot / MiFlash-labelled output', 'Clear console control', 'Device status side panel', 'Progress ring and workflow stages'],
       warning: 'Console text is not independent proof of a successful flash. Confirm the final device state.',
-      image: './screenshots/6.png', alt: 'Terminal console with application logs', tab: 'tab-console'
+      image: './screenshots/4.png', alt: 'Terminal console with application logs', tab: 'tab-console'
     },
     ram: {
       number: 'WORKSPACE 05', title: 'RAM Cleaner',
       description: 'The supplied Windows dialog shows physical RAM use, memory-area checkboxes and an Optimize Memory Now action.',
       controls: ['Physical RAM used / free display', 'Combined Page List and Modified Page List', 'Registry Cache, Standby List and System File Cache', 'Working Set and Low Priority Standby List options'],
       warning: 'Memory cleaning can be temporary and may cause caches to rebuild. Save work first; results depend on the system.',
-      image: './screenshots/3.png', alt: 'Windows Memory Cleaner dialog showing memory-area checklist', tab: 'tab-ram'
+      image: './screenshots/8.png', alt: 'Windows Memory Cleaner dialog showing memory-area checklist', tab: 'tab-ram'
     }
   };
 
