@@ -1,6 +1,13 @@
 Instructions !!
 October 22, 2026 by 乙〇Ｒ〇 ᥫ᭡፝֟፝֟ | 𝙊𝙣𝙮𝙭
-📱 ROM Flasher Pro V6 – Flashing Process
+
+═══════════════════════════════════════════════════════════
+ROM FLASHER PRO V6 – FLASHING PROCESS
+═══════════════════════════════════════════════════════════
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART A — AOSP / CUSTOM ROM FLASHING (Fastboot + Sideload)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ① Open ROM Flasher Pro V6.
 
@@ -14,16 +21,16 @@ October 22, 2026 by 乙〇Ｒ〇 ᥫ᭡፝֟፝֟ | 𝙊𝙣𝙮𝙭
 
 ⑥ Click "Start Auto Flash".
 
-➜ The tool will automatically:
-• Extract the ROM ZIP.
-• Flash boot, init_boot, vendor_boot, dtbo and recovery images.
-• Reboot your device into Recovery automatically.
+   ➜ The tool will automatically:
+   • Extract the ROM ZIP.
+   • Flash boot, init_boot, vendor_boot, dtbo and recovery images.
+   • Reboot your device into Recovery automatically.
 
 ⑦ In Recovery:
-• Select "Format Data" and confirm.
-• Go to "Apply Update" → "ADB Sideload".
+   • Select "Format Data" and confirm.
+   • Go to "Apply Update" → "ADB Sideload".
 
-➜ After enabling ADB Sideload, the tool will automatically start sideloading the ROM.
+   ➜ After enabling ADB Sideload, the tool will automatically start sideloading the ROM.
 
 ⑧ Wait until the installation reaches 100%.
 
@@ -31,3 +38,110 @@ October 22, 2026 by 乙〇Ｒ〇 ᥫ᭡፝֟፝֟ | 𝙊𝙣𝙮𝙭
 
 ✅ First boot may take 5–10 minutes.
 ⚠️ Do not disconnect the USB cable or close the tool during the flashing process.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART B — HYPEROS / MIUI FLASHING (MiFlash Official Method)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+① Open ROM Flasher Pro V6.
+
+② Install all required drivers first:
+   • Go to "Drivers & ADB Ready".
+   • Click "Install All 5" → then "Verify in CMD".
+   • Make sure all 5 WHQL drivers show as INSTALLED.
+
+③ Connect your device with USB Debugging enabled.
+
+④ Click "Browse" and select your HyperOS / MIUI ROM package:
+   • Supported formats: .tgz (Fastboot ROM) or official MiFlash folder.
+   • The tool will auto-detect the ROM type and switch to MiFlash workflow.
+
+⑤ Put your device into Fastboot Mode:
+   • Click "Reboot to Bootloader" OR
+   • Manually hold Volume Down + Power until Fastboot logo appears.
+
+⑥ Wait until the device is detected as Fastboot / MiFlash device.
+
+⑦ Select your flash mode (MiFlash official modes):
+
+   ➜ Clean All
+      • Wipes all data + flashes the ROM (recommended for clean install).
+
+   ➜ Save User Data
+      • Keeps internal storage, wipes system partitions only.
+
+   ➜ Clean All & Lock
+      • Wipes everything and re-locks the bootloader (⚠️ irreversible).
+
+   ➜ Qualcomm EDL 9008 Mode
+      • For hard-bricked / dead devices (requires QDLoader 9008 driver).
+
+⑧ Optional but recommended before flashing:
+   • Enable "Validate md5sum.xml Before Flash" for integrity check.
+   • Enable "ARB Guard" if your device has Anti-Rollback protection.
+   • Click "Bootloader Info & Token" to verify device state.
+
+⑨ Click "Start Auto Flash" (or "Open XiaoMiFlash GUI" for the official UI).
+
+   ➜ The tool will automatically:
+   • Validate md5 checksums (if enabled).
+   • Parse rawprogram*.xml / patch*.xml files.
+   • Flash all partitions via fh_loader / QSaharaServer.
+   • Show live progress in the AUTOMATED PROGRESS panel.
+
+⑩ Wait until the process reaches 100% and shows "Flash completed successfully".
+
+⑪ Once finished:
+   • For "Clean All" / "Save User Data" → device will auto-reboot.
+   • For "Clean All & Lock" → bootloader will be re-locked automatically.
+
+✅ First boot after HyperOS flash may take 5–10 minutes.
+⚠️ Never disconnect the USB cable or close the tool during MiFlash flashing.
+⚠️ Never interrupt EDL 9008 mode — it can brick the device permanently.
+⚠️ "Clean All & Lock" will PERMANENTLY re-lock the bootloader — do not use unless you are sure.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART C — KERNEL / RECOVERY FLASHING (AnyKernel3 / IMG)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+① Open ROM Flasher Pro V6.
+
+② Connect your device with USB Debugging enabled.
+
+③ Click "Browse" and select:
+   • AnyKernel3 ZIP, OR
+   • Single partition .img (boot / init_boot / vendor_boot / dtbo / recovery).
+
+④ The tool will auto-detect the file type and switch to the correct workflow.
+
+⑤ Select the target partition (auto-selected if detected from payload.bin).
+
+⑥ Click "Start Auto Flash".
+
+   ➜ The tool will automatically:
+   • Flash the selected partition(s) via fastboot.
+   • Verify the flash result.
+
+⑦ Once finished, reboot to System or Recovery as required.
+
+✅ For kernel flash: reboot normally after flash.
+✅ For recovery flash: reboot directly to Recovery (do NOT boot to System first).
+⚠️ Wrong partition selection can soft-brick the device — double-check before flashing.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENERAL SAFETY RULES (ALL METHODS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ Always use the correct ROM for your exact device model.
+⚠️ Keep battery above 50% before flashing.
+⚠️ Use a good quality USB cable and a stable USB port (prefer USB 2.0 for flashing).
+⚠️ Do not disconnect the USB cable or close the tool during flashing.
+⚠️ Do not run other ADB / Fastboot tools simultaneously.
+⚠️ For EDL 9008 mode — never interrupt power or USB.
+⚠️ "Clean All & Lock" and "Erase Userdata" are DESTRUCTIVE and IRREVERSIBLE.
+✅ First boot after any flash may take 5–10 minutes — be patient.
+✅ If the device gets stuck, wait 10 minutes before force-rebooting.
+✅ Keep a backup of your data — flashing may wipe everything.
